@@ -192,101 +192,65 @@
 
 .focus-page-copy h2 { display: flex; align-items: center; gap: 8px; }
 
-/* ═════════════════════════════ DAY THEME ═════════════════════════════ */
+/* ═════════════════ DAY THEME: deep daylight sky (blue), sunset crimson in Dense ═════════════════ */
 .theme-day {
-  --bg: #eaf3fb;
-  --panel: rgba(255, 255, 255, 0.82);
-  --panel2: #ffffff;
-  --line: rgba(15, 45, 80, 0.13);
-  --text: #0b1b2b;
-  --muted: #4a6176;
-  --cyan: #0369a1;
-  --green: #15803d;
-  --amber: #b45309;
-  --red: #b91c1c;
-  --sd-rule: rgba(15, 45, 80, 0.12);
-  color: var(--text);
+  --panel: rgba(6, 42, 82, 0.52);
+  --panel2: rgba(5, 34, 68, 0.9);
+  --line: rgba(186, 230, 253, 0.24);
+  --text: #f0f9ff;
+  --muted: #b3d9f2;
+  --cyan: #7dd3fc;
+  --sd-rule: rgba(224, 242, 254, 0.18);
 }
-.app-shell.theme-day, .app-shell.theme-day.dense-mode {
+.app-shell.theme-day {
   background:
-    radial-gradient(900px 520px at 88% -6%, rgba(255, 213, 128, 0.55), rgba(255, 213, 128, 0) 60%),
-    radial-gradient(1200px 700px at 10% -20%, rgba(125, 211, 252, 0.55), rgba(125, 211, 252, 0) 65%),
-    linear-gradient(180deg, #cfe5f6 0%, #e6f1fa 30%, #f4f8fc 70%, #f7fafd 100%);
+    radial-gradient(760px 460px at 86% -8%, rgba(255, 226, 150, 0.55), rgba(255, 226, 150, 0) 62%),
+    radial-gradient(1100px 600px at 6% 0%, rgba(125, 211, 252, 0.35), rgba(125, 211, 252, 0) 60%),
+    radial-gradient(1400px 500px at 50% 110%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, #0a4f8f 0%, #0d68ad 34%, #1179bf 62%, #0b5c9c 100%);
+  background-attachment: fixed;
 }
-.theme-day.dense-mode { --panel: rgba(255, 255, 255, 0.9); --panel2: #ffffff; --line: rgba(15, 45, 80, 0.15); }
-html[data-theme='day'], html[data-theme='day'] body { background: #eaf3fb; }
-
-.theme-day .sd-top { background: rgba(244, 249, 253, 0.82); }
-.theme-day .sd-rail { background: rgba(255, 255, 255, 0.45); }
-.theme-day .sd-rail button:hover { background: rgba(3, 105, 161, 0.07); }
-.theme-day .sd-rail button.active { background: rgba(3, 105, 161, 0.11); }
-.theme-day .panel,
-.theme-day .stress-tile,
-.theme-day .sd-headline,
-.theme-day .sd-globe.globe-panel { background: var(--panel) !important; border-color: var(--line) !important; box-shadow: 0 1px 2px rgba(15, 45, 80, 0.05), 0 8px 24px rgba(15, 45, 80, 0.06) !important; color: var(--text); }
-.theme-day .sd-kpi { background: rgba(255, 255, 255, 0.7); }
-.theme-day .market-tape { background: rgba(255, 255, 255, 0.7) !important; border-color: var(--line) !important; }
-.theme-day .tape-item { background: transparent !important; border-color: var(--line) !important; }
-.theme-day .tape-item span { color: var(--muted) !important; }
-.theme-day .tape-item strong { color: var(--text) !important; }
-.theme-day .tape-item em { color: var(--muted); }
-.theme-day .tape-item em.up { color: #b91c1c; }
-.theme-day .tape-item em.down { color: #15803d; }
-.theme-day .command-search input,
-.theme-day .topbar-right .command-search input { background: rgba(255, 255, 255, 0.9) !important; color: var(--text) !important; border-color: var(--line) !important; }
-.theme-day .command-search > svg { color: var(--muted) !important; }
-.theme-day .search-command-panel { background: #ffffff !important; border-color: var(--line) !important; box-shadow: 0 18px 48px rgba(15, 45, 80, 0.18) !important; color: var(--text); }
-.theme-day .search-result-row { color: var(--text) !important; }
-.theme-day .search-result-row em { color: var(--muted) !important; }
-.theme-day .mode-switch { background: rgba(255, 255, 255, 0.85) !important; border-color: var(--line) !important; }
-.theme-day .mode-switch button { color: var(--muted) !important; }
-.theme-day .mode-switch button.active { color: #fff !important; }
-.theme-day .icon-button { background: rgba(255, 255, 255, 0.85); }
-.theme-day h1, .theme-day h2, .theme-day h3, .theme-day strong, .theme-day b { color: inherit; }
-.theme-day .panel-title h2, .theme-day .stress-tile h3 { color: var(--text) !important; }
-.theme-day .panel p, .theme-day .stress-tile p, .theme-day .muted-note { color: var(--muted) !important; }
-.theme-day .eyebrow, .theme-day .panel-title span { color: var(--muted) !important; }
-.theme-day .alert-item { background: rgba(255, 255, 255, 0.65) !important; border-color: var(--line) !important; }
-.theme-day .alert-item strong { color: var(--text) !important; }
-.theme-day .alert-item time { color: var(--muted) !important; }
-.theme-day .alert-item.high { border-left-color: #b91c1c !important; }
-.theme-day .alert-item.medium { border-left-color: #b45309 !important; }
-.theme-day .alert-item.low { border-left-color: #0369a1 !important; }
-.theme-day .event-row, .theme-day .corridor-row, .theme-day .data-source-row, .theme-day .corridor-feature-card,
-.theme-day .data-health-summary div, .theme-day .event-risk-score, .theme-day .region-readout, .theme-day .globe-rank button {
-  background: rgba(255, 255, 255, 0.6) !important; border-color: var(--line) !important; color: var(--text) !important;
+.app-shell.theme-day.dense-mode {
+  --panel: rgba(70, 10, 18, 0.5);
+  --panel2: rgba(58, 8, 14, 0.92);
+  --line: rgba(254, 202, 202, 0.24);
+  --muted: #f5c4bd;
+  --cyan: #fdba74;
+  --sd-rule: rgba(254, 226, 226, 0.18);
+  background:
+    radial-gradient(760px 460px at 86% -8%, rgba(255, 196, 120, 0.55), rgba(255, 196, 120, 0) 62%),
+    radial-gradient(1100px 620px at 8% 0%, rgba(248, 113, 113, 0.32), rgba(248, 113, 113, 0) 60%),
+    linear-gradient(180deg, #5c0f17 0%, #8e1b22 38%, #b8322a 72%, #8a2317 100%);
+  background-attachment: fixed;
 }
-.theme-day .event-row span, .theme-day .corridor-row span, .theme-day .data-source-row span, .theme-day .corridor-feature-card span,
-.theme-day .corridor-feature-card small, .theme-day .corridor-row small, .theme-day .data-health-summary span, .theme-day .region-readout span,
-.theme-day .driver-list li { color: var(--muted) !important; }
-.theme-day .corridor-filters button, .theme-day .seg button, .theme-day .chart-exports button, .theme-day .preset-row button.ghost { color: var(--muted) !important; border-color: var(--line) !important; background: rgba(255, 255, 255, 0.6) !important; }
-.theme-day .corridor-filters button.active, .theme-day .seg button.active { color: var(--text) !important; background: rgba(3, 105, 161, 0.12) !important; }
-.theme-day .chart-controls select { background: #fff; color: var(--text); }
-.theme-day .preset-row button { background: rgba(3, 105, 161, 0.08); border-color: rgba(3, 105, 161, 0.3); color: var(--text); }
-.theme-day .indicator-table td { border-bottom-color: rgba(15, 45, 80, 0.08); }
-.theme-day .indicator-table tbody tr:hover, .theme-day .indicator-table tbody tr.active { background: rgba(3, 105, 161, 0.07); }
-.theme-day .formula { background: rgba(3, 105, 161, 0.06); border-color: rgba(3, 105, 161, 0.22); }
-.theme-day .metric i { background: rgba(15, 45, 80, 0.08) !important; }
-.theme-day .metric span, .theme-day .metric strong { color: var(--text) !important; }
-.theme-day .stale-banner { color: #92400e; }
-.theme-day .globe-legend span { background: rgba(255, 255, 255, 0.85); }
-.theme-day .search-tips-row button, .theme-day .search-api-row a { color: var(--cyan) !important; border-color: var(--line) !important; background: rgba(3, 105, 161, 0.05) !important; }
-.theme-day footer { color: var(--muted); }
-.theme-day .tile-members li { border-top-color: var(--line); }
-.theme-day .scenario-slider input { accent-color: #0369a1; }
-.theme-day .source-registry a { color: var(--cyan); }
-.theme-day details summary { color: var(--muted); }
+html[data-theme='day'], html[data-theme='day'] body { background: #0a4f8f; }
 
-/* fixes */
+/* Glass surfaces tinted to the sky instead of near-black */
+.theme-day .sd-top { background: rgba(6, 46, 92, 0.62); }
+.theme-day .sd-rail { background: rgba(6, 46, 92, 0.38); }
+.theme-day.dense-mode .sd-top { background: rgba(72, 10, 16, 0.62); }
+.theme-day.dense-mode .sd-rail { background: rgba(72, 10, 16, 0.38); }
+.theme-day .panel, .theme-day .sd-headline, .theme-day .sd-globe.globe-panel { backdrop-filter: blur(14px) saturate(1.2); box-shadow: 0 10px 40px rgba(2, 24, 52, 0.25); }
+.theme-day .sd-kpi { background: rgba(224, 242, 254, 0.06); }
+.theme-day .market-tape { background: rgba(6, 46, 92, 0.45) !important; }
+.theme-day.dense-mode .market-tape { background: rgba(72, 10, 16, 0.45) !important; }
+.theme-day .command-search input, .theme-day .topbar-right .command-search input,
+.theme-day .mode-switch, .theme-day .icon-button { background: rgba(5, 40, 80, 0.55) !important; }
+.theme-day.dense-mode .command-search input, .theme-day.dense-mode .mode-switch, .theme-day.dense-mode .icon-button { background: rgba(70, 10, 16, 0.55) !important; }
+.theme-day .search-command-panel { background: rgba(5, 38, 76, 0.96) !important; }
+.theme-day.dense-mode .search-command-panel { background: rgba(60, 8, 14, 0.96) !important; }
+.theme-day .sd-rail button.active { background: rgba(224, 242, 254, 0.16); }
+.theme-day .globe-legend span { background: rgba(5, 38, 76, 0.7); }
+.theme-day .sd-globe .region-readout { background: rgba(224, 242, 254, 0.07) !important; }
+.theme-day .formula { background: rgba(224, 242, 254, 0.08); border-color: rgba(186, 230, 253, 0.3); }
+
+/* layout fixes */
 .app-shell.sd-shell { gap: 0 !important; row-gap: 0 !important; align-content: start; }
 .sd-shell > .sd-top { grid-row: 1; }
 .sd-shell > .sd-rail, .sd-shell > .sd-main { grid-row: 2; }
 .sd-globe .region-readout, .sd-globe .region-readout-v4 { position: static !important; width: auto !important; max-width: none !important; transform: none !important; margin: 0 !important; inset: auto !important; }
 .sd-globe .globe-copy { overflow: hidden; }
 .sd-globe .globe-copy > * { max-width: 100%; }
-.theme-day .region-score-v4 span, .theme-day .region-identity-v4 span { color: var(--muted) !important; }
-.theme-day .region-identity-v4 strong { color: var(--text) !important; }
-
 .sd-main .market-tape { margin: 0 !important; width: auto !important; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
 .sd-main .market-tape::-webkit-scrollbar { display: none; }
 
@@ -299,8 +263,6 @@ html[data-theme='day'], html[data-theme='day'] body { background: #eaf3fb; }
 .sd-globe .globe-copy { min-width: 0 !important; width: auto !important; align-self: stretch !important; justify-content: flex-start; }
 .sd-globe .globe-copy h2 { font-size: 18px !important; letter-spacing: -0.01em !important; line-height: 1.2 !important; margin: 0 !important; }
 .sd-globe .region-readout strong { font-size: 26px !important; letter-spacing: -0.02em !important; }
-.theme-day .sd-globe .region-readout .region-score-v4 span,
-.theme-day .sd-globe .region-readout .region-identity-v4 span { color: var(--muted) !important; opacity: 1 !important; }
 .theme-night .sd-globe .region-readout .region-score-v4 span { opacity: 1 !important; }
 .chart-studio .panel-title span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 50%; }
 

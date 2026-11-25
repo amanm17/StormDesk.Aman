@@ -269,7 +269,7 @@ export default function GlobePanel({ mode, theme, countries, corridors, focusedC
     const glowFrom = (u.atmo.glow.value as THREE.Color).clone();
     const starFrom = u.stars?.opacity ?? 0.85;
     const starTo = theme === 'day' ? 0 : 0.85;
-    const glowTo = new THREE.Color(theme === 'day' ? '#7cc4ff' : mode === 'dense' ? '#ff5a4f' : '#3b6fff');
+    const glowTo = new THREE.Color(theme === 'day' ? (mode === 'dense' ? '#ffb38a' : '#bfe6ff') : mode === 'dense' ? '#ff5a4f' : '#3b6fff');
     const t0 = performance.now();
     let raf = 0;
     // Swing the camera to the sunlit side (Day) or the city-lit side (Night).
