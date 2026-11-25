@@ -1,0 +1,83 @@
+{
+ "fetched_at": "2026-11-25T10:42:57+00:00",
+ "values": {
+  "ind-gbr-textiles": {
+   "value_usd": 1585317739.6690001,
+   "year": 2025,
+   "reporter_total_imports_usd": 948864981847.274,
+   "share_of_reporter_imports": 0.1670751655923337
+  },
+  "chn-usa-electronics": {
+   "value_usd": 136309439247.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 3504272131456.0,
+   "share_of_reporter_imports": 3.889807473096115
+  },
+  "sau-chn-crude": {
+   "value_usd": 43389398132.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 2579254335894.0,
+   "share_of_reporter_imports": 1.6822458153185857
+  },
+  "sau-ind-crude": {
+   "value_usd": 20207611516.161,
+   "year": 2025,
+   "reporter_total_imports_usd": 752731081941.054,
+   "share_of_reporter_imports": 2.684572485575061
+  },
+  "rus-ind-crude": {
+   "value_usd": 45382969857.708,
+   "year": 2025,
+   "reporter_total_imports_usd": 752731081941.054,
+   "share_of_reporter_imports": 6.0291079970657995
+  },
+  "chl-chn-copper": {
+   "value_usd": 29301080503.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 2579254335894.0,
+   "share_of_reporter_imports": 1.1360291265283033
+  },
+  "aus-chn-ironore": {
+   "value_usd": 73563057354.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 2579254335894.0,
+   "share_of_reporter_imports": 2.8521056000668574
+  },
+  "zaf-chn-metals": {
+   "value_usd": 26572857858.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 2579254335894.0,
+   "share_of_reporter_imports": 1.0302534918019062
+  },
+  "nga-ind-crude": {
+   "value_usd": 4250460954.533,
+   "year": 2025,
+   "reporter_total_imports_usd": 752731081941.054,
+   "share_of_reporter_imports": 0.5646719069408445
+  },
+  "vnm-usa-apparel": {
+   "value_usd": 78942173922.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 3504272131456.0,
+   "share_of_reporter_imports": 2.2527409676142955
+  },
+  "jpn-usa-autos": {
+   "value_usd": 46216306411.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 3504272131456.0,
+   "share_of_reporter_imports": 1.318856089860734
+  },
+  "deu-usa-machinery": {
+   "value_usd": 58945827540.0,
+   "year": 2025,
+   "reporter_total_imports_usd": 3504272131456.0,
+   "share_of_reporter_imports": 1.6821132985327951
+  },
+  "are-ind-energy": {
+   "value_usd": 44394569761.218994,
+   "year": 2025,
+   "reporter_total_imports_usd": 752731081941.054,
+   "share_of_reporter_imports": 5.897799469996579
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "started_at": "2026-11-25T11:05:17+00:00",
+ "steps": [
+  {
+   "name": "fetch FRED",
+   "status": "ok",
+   "seconds": 9.5
+  },
+  {
+   "name": "fetch Frankfurter",
+   "status": "ok",
+   "seconds": 0.8
+  },
+  {
+   "name": "fetch CoinGecko",
+   "status": "ok",
+   "seconds": 12.4
+  },
+  {
+   "name": "score",
+   "status": "ok",
+   "seconds": 0.9
+  },
+  {
+   "name": "fetch World Bank",
+   "status": "ok",
+   "seconds": 0.0
+  },
+  {
+   "name": "countries",
+   "status": "ok",
+   "seconds": 0.9
+  },
+  {
+   "name": "fetch UN Comtrade",
+   "status": "ok",
+   "seconds": 0.0
+  },
+  {
+   "name": "corridors",
+   "status": "ok",
+   "seconds": 0.0
+  },
+  {
+   "name": "events",
+   "status": "ok",
+   "seconds": 0.0
+  },
+  {
+   "name": "scenarios",
+   "status": "ok",
+   "seconds": 2.2
+  }
+ ],
+ "finished_at": "2026-11-25T11:05:44+00:00",
+ "seconds": 27.0,
+ "status": "ok",
+ "global": 64.7,
+ "weather": "Storm Watch",
+ "health": {
+  "live_count": 6,
+  "proxy_or_partial_count": 1,
+  "blocked_or_missing_count": 0,
+  "average_confidence": 89,
+  "overall_health": "Operational"
+ }
+}

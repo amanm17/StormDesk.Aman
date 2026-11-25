@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.*
+.wrangler
+__pycache__/
+*.pyc
+*.tmp
+*.log
+.DS_Store
+.vscode/*
+.idea

@@ -1,0 +1,440 @@
+{
+ "generated_at": "2026-11-25T11:05:41+00:00",
+ "source": "Official central-bank calendars",
+ "reviewed_on": "2026-11-25",
+ "calendar_sources": {
+  "Federal Reserve": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+  "European Central Bank": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+  "Bank of England": "https://www.bankofengland.co.uk/news/2026/september/mpc-dates-for-2027",
+  "Reserve Bank of India": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422"
+ },
+ "event_risk_score": 25.3,
+ "event_weather": "Background",
+ "top_events": [
+  {
+   "date": "2026-12-04",
+   "region": "India",
+   "source": "Reserve Bank of India",
+   "event": "RBI MPC policy decision",
+   "importance": 85,
+   "days_until": 9,
+   "event_pressure": 22.1,
+   "weather": "Background"
+  },
+  {
+   "date": "2026-12-09",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 14,
+   "event_pressure": 25.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2026-12-17",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 92,
+   "days_until": 22,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2026-12-17",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 90,
+   "days_until": 22,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-01-27",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision",
+   "importance": 92,
+   "days_until": 63,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-02-04",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate + Monetary Policy Report",
+   "importance": 92,
+   "days_until": 71,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-02-04",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 71,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-02-05",
+   "region": "India",
+   "source": "Reserve Bank of India",
+   "event": "RBI MPC policy decision",
+   "importance": 85,
+   "days_until": 72,
+   "event_pressure": 8.5,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-03-17",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 112,
+   "event_pressure": 9.6,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-03-18",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 113,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-03-18",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 88,
+   "days_until": 113,
+   "event_pressure": 8.8,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-04-28",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision",
+   "importance": 92,
+   "days_until": 154,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  }
+ ],
+ "all_upcoming_events": [
+  {
+   "date": "2026-12-04",
+   "region": "India",
+   "source": "Reserve Bank of India",
+   "event": "RBI MPC policy decision",
+   "importance": 85,
+   "days_until": 9,
+   "event_pressure": 22.1,
+   "weather": "Background"
+  },
+  {
+   "date": "2026-12-09",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 14,
+   "event_pressure": 25.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2026-12-17",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 92,
+   "days_until": 22,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2026-12-17",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 90,
+   "days_until": 22,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-01-27",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision",
+   "importance": 92,
+   "days_until": 63,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-02-04",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate + Monetary Policy Report",
+   "importance": 92,
+   "days_until": 71,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-02-04",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 71,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-02-05",
+   "region": "India",
+   "source": "Reserve Bank of India",
+   "event": "RBI MPC policy decision",
+   "importance": 85,
+   "days_until": 72,
+   "event_pressure": 8.5,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-03-17",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 112,
+   "event_pressure": 9.6,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-03-18",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 113,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-03-18",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 88,
+   "days_until": 113,
+   "event_pressure": 8.8,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-04-28",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision",
+   "importance": 92,
+   "days_until": 154,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-04-29",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate + Monetary Policy Report",
+   "importance": 92,
+   "days_until": 155,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-04-29",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 155,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-06-09",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 196,
+   "event_pressure": 9.6,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-06-10",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 197,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-06-17",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 88,
+   "days_until": 204,
+   "event_pressure": 8.8,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-07-22",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 239,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-07-28",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision",
+   "importance": 92,
+   "days_until": 245,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-07-29",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate + Monetary Policy Report",
+   "importance": 92,
+   "days_until": 246,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-09-09",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 288,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-09-15",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 294,
+   "event_pressure": 9.6,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-09-16",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 88,
+   "days_until": 295,
+   "event_pressure": 8.8,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-10-27",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC strategy meeting (no policy decision)",
+   "importance": 60,
+   "days_until": 336,
+   "event_pressure": 6.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-10-28",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 337,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-11-04",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate + Monetary Policy Report",
+   "importance": 92,
+   "days_until": 344,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-11-17",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision + projections",
+   "importance": 96,
+   "days_until": 357,
+   "event_pressure": 9.6,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-12-16",
+   "region": "Euro Area",
+   "source": "European Central Bank",
+   "event": "ECB policy decision",
+   "importance": 90,
+   "days_until": 386,
+   "event_pressure": 9.0,
+   "weather": "Background"
+  },
+  {
+   "date": "2027-12-16",
+   "region": "UK",
+   "source": "Bank of England",
+   "event": "BoE Bank Rate announcement",
+   "importance": 88,
+   "days_until": 386,
+   "event_pressure": 8.8,
+   "weather": "Background"
+  },
+  {
+   "date": "2028-01-26",
+   "region": "US",
+   "source": "Federal Reserve",
+   "event": "FOMC decision",
+   "importance": 92,
+   "days_until": 427,
+   "event_pressure": 9.2,
+   "weather": "Background"
+  }
+ ],
+ "needs_update": false,
+ "errors": [],
+ "model_note": "Event risk is scheduled-calendar pressure, not a forecast of the event outcome."
+}

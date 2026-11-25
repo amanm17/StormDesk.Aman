@@ -1,0 +1,36 @@
+{
+  "name": "stormdesk-aman",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "preview": "vite preview --host 127.0.0.1",
+    "pipeline": "python3 -m pipeline.run",
+    "pipeline:fast": "python3 -m pipeline.run --skip-gdelt",
+    "test": "python3 -m unittest discover tests",
+    "refresh": "npm run pipeline && npm run build",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "echarts": "^5.5.1",
+    "lucide-react": "^0.468.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.160.1",
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@types/three": "^0.160.0",
+    "wrangler": "^4.50.0"
+  },
+  "description": "StormDesk by Aman: a free, open-data financial weather radar",
+  "author": "Aman Mishra"
+}

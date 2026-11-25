@@ -1,0 +1,42 @@
+{
+  "reviewed_on": "2026-11-25",
+  "review_note": "Official central-bank schedules. Review each December and March (RBI publishes its next fiscal-year schedule in March). The pipeline flags the calendar when fewer than 4 events remain in the next 120 days.",
+  "sources": {
+    "Federal Reserve": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+    "European Central Bank": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+    "Bank of England": "https://www.bankofengland.co.uk/news/2026/september/mpc-dates-for-2027",
+    "Reserve Bank of India": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422"
+  },
+  "events": [
+    {"date": "2026-12-04", "region": "India", "source": "Reserve Bank of India", "event": "RBI MPC policy decision", "importance": 85},
+    {"date": "2026-12-09", "region": "US", "source": "Federal Reserve", "event": "FOMC decision + projections", "importance": 96},
+    {"date": "2026-12-17", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 92},
+    {"date": "2026-12-17", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate announcement", "importance": 90},
+    {"date": "2027-01-27", "region": "US", "source": "Federal Reserve", "event": "FOMC decision", "importance": 92},
+    {"date": "2027-02-04", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-02-04", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate + Monetary Policy Report", "importance": 92},
+    {"date": "2027-02-05", "region": "India", "source": "Reserve Bank of India", "event": "RBI MPC policy decision", "importance": 85},
+    {"date": "2027-03-17", "region": "US", "source": "Federal Reserve", "event": "FOMC decision + projections", "importance": 96},
+    {"date": "2027-03-18", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-03-18", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate announcement", "importance": 88},
+    {"date": "2027-04-28", "region": "US", "source": "Federal Reserve", "event": "FOMC decision", "importance": 92},
+    {"date": "2027-04-29", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-04-29", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate + Monetary Policy Report", "importance": 92},
+    {"date": "2027-06-09", "region": "US", "source": "Federal Reserve", "event": "FOMC decision + projections", "importance": 96},
+    {"date": "2027-06-10", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-06-17", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate announcement", "importance": 88},
+    {"date": "2027-07-22", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-07-28", "region": "US", "source": "Federal Reserve", "event": "FOMC decision", "importance": 92},
+    {"date": "2027-07-29", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate + Monetary Policy Report", "importance": 92},
+    {"date": "2027-09-09", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-09-15", "region": "US", "source": "Federal Reserve", "event": "FOMC decision + projections", "importance": 96},
+    {"date": "2027-09-16", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate announcement", "importance": 88},
+    {"date": "2027-10-27", "region": "US", "source": "Federal Reserve", "event": "FOMC strategy meeting (no policy decision)", "importance": 60},
+    {"date": "2027-10-28", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-11-04", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate + Monetary Policy Report", "importance": 92},
+    {"date": "2027-11-17", "region": "US", "source": "Federal Reserve", "event": "FOMC decision + projections", "importance": 96},
+    {"date": "2027-12-16", "region": "Euro Area", "source": "European Central Bank", "event": "ECB policy decision", "importance": 90},
+    {"date": "2027-12-16", "region": "UK", "source": "Bank of England", "event": "BoE Bank Rate announcement", "importance": 88},
+    {"date": "2028-01-26", "region": "US", "source": "Federal Reserve", "event": "FOMC decision", "importance": 92}
+  ]
+}
