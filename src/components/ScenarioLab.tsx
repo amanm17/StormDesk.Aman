@@ -59,19 +59,13 @@ export default function ScenarioLab({ snapshot }: { snapshot: Snapshot | null })
     return { base, scored, baseClasses, classes, contributions };
   }, [snapshot, scenarios, shocks]);
 
-  if (!snapshot || !result) return <section className="panel"><p className="muted-note">Loading scenarios…</p></section>;
-  const active = Object.values(shocks).some((v) => v);
+  if (!snapshot || !result) return <section className="panel"><p className="muted-note">Loading…</p></section>;
 
   return (
     <section className="focus-page scenario-page">
       <div className="focus-page-copy">
-        <span className="eyebrow"><FlaskConical size={14} /> Scenario Lab</span>
-        <h2>Stress-test a market shock</h2>
-        <p>
-          Move a slider to apply an instant shock to today's data. StormDesk re-scores the affected indicators with the same
-          engine as the live index (percentile, momentum, volatility) and shows how the weather would change. Shocks are
-          combined additively, a reasonable approximation for moderate moves. This is a model, not a forecast or advice.
-        </p>
+        <h2><FlaskConical size={18} /> Scenario Lab</h2>
+        <p>Instant shock to today's data, re-scored with the live engine. Shocks add linearly.</p>
       </div>
       <div className="scenario-grid">
         <div className="panel scenario-controls-panel">
@@ -102,19 +96,18 @@ export default function ScenarioLab({ snapshot }: { snapshot: Snapshot | null })
             </div>
             <div className="arrow">→</div>
             <div>
-              <span>Under scenario</span>
+              <span>Scenario</span>
               <strong style={{ color: stressColour(result.scored) }}>{Math.round(result.scored)}</strong>
               <em>{weatherLabel(result.scored)}</em>
             </div>
           </div>
-          {!active && <p className="muted-note">Pick a preset or move a slider.</p>}
           {result.contributions.length > 0 && (
             <ul className="scenario-contrib">
               {result.contributions.map((c) => <li key={c.label}><span>{c.label}</span><b>{signed(c.delta)}</b></li>)}
             </ul>
           )}
           <table className="indicator-table scenario-table">
-            <thead><tr><th>Asset class</th><th>Today</th><th>Scenario</th><th>Change</th></tr></thead>
+            <thead><tr><th>Class</th><th>Today</th><th>Scenario</th><th>Δ</th></tr></thead>
             <tbody>
               {CLASS_ORDER.filter((k) => result.baseClasses[k] !== undefined).map((k) => {
                 const a = result.baseClasses[k];

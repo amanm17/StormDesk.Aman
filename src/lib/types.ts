@@ -2,7 +2,7 @@
 
 export type Mode = 'clean' | 'dense';
 export type View = 'dashboard' | 'globe' | 'trade' | 'scenario' | 'charts';
-export type Page = 'workbench' | 'learn' | 'methodology' | 'sources';
+export type Page = 'workbench' | 'guide' | 'sources';
 
 export type ForecastBand = { mean: number; low: number; high: number; weather: string };
 export type Forecast = {

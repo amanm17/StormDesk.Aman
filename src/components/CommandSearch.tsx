@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { BookOpen, CalendarClock, Database, Gauge, Globe2, Landmark, LineChart, Route, Search, X } from 'lucide-react';
 import type { CorridorPayload, CountryPayload, HealthPayload, Page, Snapshot, View } from '../lib/types';
-import { concepts } from '../content/concepts';
+import { GUIDE_CHAPTERS } from '../content/guide';
 import { fmt } from '../lib/weather';
 
 type Item = { title: string; subtitle: string; type: string; tags: string; go: () => void; icon: JSX.Element };
@@ -33,14 +33,13 @@ export default function CommandSearch({ snapshot, countries, corridors, health, 
     const items: Item[] = [];
     const page = (title: string, subtitle: string, go: () => void, icon: JSX.Element, tags = '') =>
       items.push({ title, subtitle, type: 'Page', tags, go, icon });
-    page('Dashboard', 'Global weather, alerts, asset classes', () => goView('dashboard'), <Gauge size={15} />, 'home overview');
-    page('Globe', 'Country weather and trade arcs', () => goView('globe'), <Globe2 size={15} />, 'map countries');
-    page('Trade Weather', 'Corridors weighted by UN Comtrade values', () => goView('trade'), <Route size={15} />, 'exports imports comtrade');
-    page('Scenario Lab', 'Shock oil, yields, the dollar, VIX, credit', () => goView('scenario'), <Gauge size={15} />, 'stress test what if simulate');
-    page('Charts', 'History, forecasts, indicators, exports', () => goView('charts'), <LineChart size={15} />, 'chart excel csv png download forecast');
-    page('Methodology', 'Formulas, weights, windows, backtest', () => goPage('methodology'), <BookOpen size={15} />, 'formula weights confidence model');
-    page('Sources', 'Data health and source lineage', () => goPage('sources'), <Database size={15} />, 'data health freshness licence');
-    page('Learn', 'How to read the weather', () => goPage('learn'), <BookOpen size={15} />, 'guide glossary beginner');
+    page('Dashboard', 'Global index, alerts, classes', () => goView('dashboard'), <Gauge size={15} />, 'home overview');
+    page('Globe', 'Country weather', () => goView('globe'), <Globe2 size={15} />, 'map countries');
+    page('Trade', 'Corridors', () => goView('trade'), <Route size={15} />, 'exports imports comtrade trade weather');
+    page('Scenario Lab', 'Shocks', () => goView('scenario'), <Gauge size={15} />, 'stress test what if simulate');
+    page('Charts', 'History, forecast, exports', () => goView('charts'), <LineChart size={15} />, 'chart excel csv png download forecast backtest');
+    page('Guide', 'Terms and method', () => goPage('guide'), <BookOpen size={15} />, 'methodology formula weights confidence glossary learn');
+    page('Sources', 'Data health, lineage', () => goPage('sources'), <Database size={15} />, 'data health freshness licence');
 
     snapshot?.asset_classes.forEach((a) => items.push({
       title: a.title, subtitle: `${Math.round(a.score)} · ${a.weather} · ${a.driver}`, type: 'Asset class',
@@ -62,9 +61,9 @@ export default function CommandSearch({ snapshot, countries, corridors, health, 
       title: e.event, subtitle: `${e.date} · ${e.region} · in ${e.days_until} days`, type: 'Event',
       tags: `${e.source} central bank meeting rates`, go: () => goView('dashboard'), icon: <CalendarClock size={15} />,
     }));
-    concepts.forEach((c) => items.push({ title: c.title, subtitle: c.short, type: 'Concept', tags: 'learn concept', go: () => goPage('learn'), icon: <BookOpen size={15} /> }));
+    GUIDE_CHAPTERS.forEach((c, i) => items.push({ title: c.title, subtitle: `Guide §${i + 1}`, type: 'Guide', tags: c.tags, go: () => { goPage('guide'); window.setTimeout(() => document.getElementById(`guide-${c.id}`)?.scrollIntoView({ behavior: 'smooth' }), 120); }, icon: <BookOpen size={15} /> }));
     health?.sources.forEach((s) => items.push({
-      title: s.label, subtitle: `${s.health} · ${s.note}`, type: 'Source', tags: `${s.key} source data health`, go: () => goPage('sources'), icon: <Database size={15} />,
+      title: s.label, subtitle: s.health, type: 'Source', tags: `${s.key} source data health`, go: () => goPage('sources'), icon: <Database size={15} />,
     }));
     return items;
   }, [snapshot, countries, corridors, health, goView, goPage, focusCountry, focusCorridor, focusIndicator]);
@@ -106,7 +105,8 @@ export default function CommandSearch({ snapshot, countries, corridors, health, 
       <Search size={17} />
       <input
         ref={input}
-        placeholder="Search markets, countries, corridors, concepts…  ( / )"
+        placeholder="Search"
+        aria-label="Search markets, countries, corridors and guide"
         value={query}
         onFocus={() => setOpen(true)}
         onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
@@ -117,15 +117,16 @@ export default function CommandSearch({ snapshot, countries, corridors, health, 
           if (e.key === 'Enter' && results[cursor]) run(results[cursor]);
         }}
       />
+      <kbd className="sd-kbd">/</kbd>
       {open && (
         <div className="search-command-panel">
           <div className="search-command-head">
-            <span>StormDesk command search · {catalogue.length} items</span>
+            <span>{catalogue.length} items</span>
             <button type="button" onClick={() => setOpen(false)} aria-label="Close search"><X size={14} /></button>
           </div>
           <div className="search-tips-row">
             <span>Try</span>
-            {['India', 'oil', 'VIX', 'FOMC', 'credit', 'scenario'].map((t) => <button key={t} type="button" onClick={() => setQuery(t)}>{t}</button>)}
+            {['India', 'VIX', 'HY spread', 'FOMC', 'contagion'].map((t) => <button key={t} type="button" onClick={() => setQuery(t)}>{t}</button>)}
           </div>
           <div className="search-results">
             {results.map((r, i) => (
@@ -134,10 +135,10 @@ export default function CommandSearch({ snapshot, countries, corridors, health, 
                 <span><b>{r.title}</b><em>{r.type} · {r.subtitle}</em></span>
               </button>
             ))}
-            {!results.length && <p className="muted-note">No match. Try a country, an indicator (VIX, BTC, HY spread) or a concept.</p>}
+            {!results.length && <p className="muted-note">No match</p>}
           </div>
           <div className="search-api-row">
-            <span>Search the sources for “{query.trim() || 'financial stress'}”:</span>
+            <span>Search sources:</span>
             <a href={`https://fred.stlouisfed.org/searchresults/?st=${ext}`} target="_blank" rel="noopener noreferrer">FRED</a>
             <a href={`https://data.worldbank.org/search?q=${ext}`} target="_blank" rel="noopener noreferrer">World Bank</a>
             <a href={`https://comtradeplus.un.org/`} target="_blank" rel="noopener noreferrer">Comtrade</a>

@@ -40,7 +40,7 @@ CORRIDORS = [
     {"id": "are-ind-energy", "from": "ARE", "to": "IND", "commodity": "Oil, gas and gold", "commodity_class": "energy", "hs": "27,71",
      "rationale": "Gulf energy and gold flows into India."},
     {"id": "usa-gbr-financial", "from": "USA", "to": "GBR", "commodity": "Financial and business services", "commodity_class": "services", "hs": None,
-     "rationale": "Transatlantic finance; Comtrade covers goods only, so dependency is neutral."},
+     "rationale": "Goods-only data; dependency set to median"},
 ]
 
 CHANNEL = {
@@ -72,14 +72,14 @@ def build(countries: list[dict], cls_latest: dict, comtrade: dict, generated_at:
         stress = 0.30 * o["stress"] + 0.30 * d["stress"] + 0.25 * channel + 0.15 * dependency
         conf = round(min(o["confidence"], d["confidence"]) * 0.6 + (90 if ct else 45) * 0.4)
         drivers = [
-            f"Origin {o['name']}: {o['stress']:.0f} ({o['weather']})",
-            f"Destination {d['name']}: {d['stress']:.0f} ({d['weather']})",
-            f"Channel ({', '.join(CHANNEL[cor['commodity_class']])}): {channel:.0f}",
+            f"Origin {o['stress']:.0f}",
+            f"Destination {d['stress']:.0f}",
+            f"Channel {channel:.0f} ({', '.join(CHANNEL[cor['commodity_class']])})",
         ]
         if ct:
-            drivers.append(f"Comtrade {ct['year']}: ${ct['value_usd'] / 1e9:,.1f}bn, {share:.1f}% of {d['name']}'s goods imports")
+            drivers.append(f"${ct['value_usd'] / 1e9:,.1f}bn ({ct['year']}) · {share:.1f}% of imports")
         else:
-            drivers.append("No Comtrade value (services or not reported); dependency set to the median corridor")
+            drivers.append("No goods value; median dependency")
         rows.append({
             **{k: cor[k] for k in ("id", "from", "to", "commodity", "commodity_class", "rationale")},
             "hs_codes": cor["hs"], "ok": True,
@@ -97,7 +97,7 @@ def build(countries: list[dict], cls_latest: dict, comtrade: dict, generated_at:
     return {
         "generated_at": generated_at,
         "source": "UN Comtrade public preview API + StormDesk country and asset-class scores",
-        "note": "Corridor stress = 0.30 origin + 0.30 destination + 0.25 market channel + 0.15 import dependency (Comtrade share).",
+        "note": "0.30 origin + 0.30 destination + 0.25 channel + 0.15 dependency",
         "corridor_count": len(rows),
         "trade_score": round(trade_score, 1) if trade_score is not None else None,
         "corridors": rows,

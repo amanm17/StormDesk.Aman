@@ -48,7 +48,7 @@ Indicator stress = 0.40·P + 0.25·M + 0.20·V + 0.10·C + 0.05·N
 
 Asset classes are weighted averages of their indicators; the global index is a weighted average of
 classes plus a contagion adjustment (up to +12). Confidence = 0.40 freshness + 0.25 source reliability
-+ 0.20 completeness + 0.15 fetch stability. Full detail is on the site's Methodology page.
++ 0.20 completeness + 0.15 fetch stability. Full detail is in the site's Guide.
 
 **Backtest** (`Charts → Since 2015`): ~99 in March 2020, 83 in the October 2022 rate shock, 76 in the
 August 2024 carry unwind, 81 in the April 2025 tariff shock; ~30 in calm spells.
@@ -68,6 +68,15 @@ August 2024 carry unwind, 81 in the April 2025 tariff shock; ~30 in calm spells.
 Optional: a free `FRED_API_KEY` GitHub secret adds US CPI / jobs / GDP / PCE release dates to Event Watch.
 
 ---
+
+## Interface
+
+- Left nav rail: Dashboard, Globe, Trade, Scenario Lab, Charts, Guide, Sources. `/` focuses search.
+- **Day / Night**: the globe shows the real day/night terminator for the current moment (subsolar point,
+  updated every minute) with city lights on the night side. Day turns the camera to the sunlit hemisphere
+  and uses a daylight palette; Night faces the night side with a starfield. Defaults to local time; the
+  choice is remembered.
+- **Clean / Dense**: Dense adds component breakdowns, members and extra metrics.
 
 ## One-time setup (about 15 minutes)
 
@@ -110,6 +119,7 @@ data/history/             one CSV per series, grows every run (committed)
 data/cache/               World Bank and Comtrade responses (30-day refresh)
 public/data/              JSON the site reads (written by the pipeline; do not hand-edit)
 src/                      React + TypeScript (Vite), ECharts, Three.js globe
+  content/guide.ts        Guide chapter index (page body in src/pages/pages.tsx)
 tests/                    scoring unit tests
 .github/workflows/        refresh.yml (4× a day), ci.yml (tests, typecheck, build)
 docs/                     the two StormDesk primers

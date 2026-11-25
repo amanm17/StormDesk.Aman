@@ -5,7 +5,8 @@ import { DataZoomComponent, GridComponent, LegendComponent, MarkAreaComponent, M
 import { CanvasRenderer } from 'echarts/renderers';
 import { BarChart3, FileImage, FileJson, FileSpreadsheet, FileText } from 'lucide-react';
 import type { Mode, Snapshot } from '../lib/types';
-import { BANDS, CLASS_ORDER, stressColour } from '../lib/weather';
+import type { Theme } from '../lib/weather';
+import { CLASS_ORDER, bandColours, stressColour } from '../lib/weather';
 import { downloadCsv, downloadDataUrl, downloadJson, downloadXlsx, type Cell } from '../lib/exporters';
 
 echarts.use([LineChart, GridComponent, TooltipComponent, LegendComponent, MarkAreaComponent, MarkLineComponent, MarkPointComponent, DataZoomComponent, CanvasRenderer]);
@@ -16,9 +17,8 @@ const WIN_DAYS: Record<Win, number> = { '3M': 65, '6M': 130, '1Y': 260 };
 const CLASS_COLOURS = ['#38bdf8', '#f472b6', '#facc15', '#a78bfa', '#34d399', '#fb923c', '#f87171', '#94a3b8'];
 const EPISODES: [string, string][] = [['2015-08-28', 'China devaluation'], ['2016-02-12', 'Oil low'], ['2018-12-28', 'Q4 2018 sell-off'], ['2020-03-20', 'COVID crash'], ['2022-10-14', 'Rate shock'], ['2023-03-17', 'US bank stress'], ['2024-08-09', 'Yen carry unwind'], ['2025-04-11', 'Tariff shock']];
 
-const bandAreas = BANDS.map((b) => [{ yAxis: b.low, itemStyle: { color: b.colour, opacity: 0.06 } }, { yAxis: b.high }]);
 
-export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode: Mode; snapshot: Snapshot | null; initialIndicator?: string | null }) {
+export default function ChartStudio({ mode, theme, snapshot, initialIndicator }: { mode: Mode; theme: Theme; snapshot: Snapshot | null; initialIndicator?: string | null }) {
   const [chartMode, setChartMode] = useState<ChartMode>('global');
   const [win, setWin] = useState<Win>('6M');
   const [indKey, setIndKey] = useState<string>(initialIndicator ?? 'hy_oas');
@@ -37,17 +37,17 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
     const h = snapshot.history;
     const n = WIN_DAYS[win];
     if (chartMode === 'global') {
-      return { title: 'Global Financial Weather Index', header: ['date', 'global_stress'], rows: h.dates.slice(-n).map((d, i) => [d, h.global.slice(-n)[i]]) };
+      return { title: 'Global index', header: ['date', 'global_stress'], rows: h.dates.slice(-n).map((d, i) => [d, h.global.slice(-n)[i]]) };
     }
     if (chartMode === 'classes') {
       const keys = CLASS_ORDER.filter((k) => h.classes[k]);
-      return { title: 'Asset-class stress', header: ['date', ...keys], rows: h.dates.slice(-n).map((d, i) => [d, ...keys.map((k) => h.classes[k].slice(-n)[i])]) };
+      return { title: 'Class stress', header: ['date', ...keys], rows: h.dates.slice(-n).map((d, i) => [d, ...keys.map((k) => h.classes[k].slice(-n)[i])]) };
     }
     if (chartMode === 'correlation') {
-      return { title: 'Cross-market correlation percentile', header: ['date', 'correlation_percentile'], rows: h.dates.slice(-n).map((d, i) => [d, h.correlation.slice(-n)[i]]) };
+      return { title: 'Correlation pctl', header: ['date', 'correlation_percentile'], rows: h.dates.slice(-n).map((d, i) => [d, h.correlation.slice(-n)[i]]) };
     }
     if (chartMode === 'long') {
-      return { title: 'Global index since 2015 (weekly)', header: ['week', 'global_stress'], rows: snapshot.long_history.dates.map((d, i) => [d, snapshot.long_history.global[i]]) };
+      return { title: 'Global index, weekly', header: ['week', 'global_stress'], rows: snapshot.long_history.dates.map((d, i) => [d, snapshot.long_history.global[i]]) };
     }
     if (!ind) return { title: '', header: [], rows: [] };
     return { title: ind.label, header: ['date', `value (${ind.unit})`], rows: (ind.value_dates ?? []).map((d, i) => [d, ind.values?.[i] ?? null]) };
@@ -65,12 +65,15 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
 
   useEffect(() => {
     if (!chart.current || !snapshot) return;
-    const text = '#cbd5e1';
-    const grid = 'rgba(148,163,184,0.15)';
+    const day = theme === 'day';
+    const text = day ? '#334155' : '#cbd5e1';
+    const grid = day ? 'rgba(51,65,85,0.14)' : 'rgba(148,163,184,0.15)';
+    const bandAreas = bandColours(theme).map((b) => [{ yAxis: b.low, itemStyle: { color: b.colour, opacity: day ? 0.07 : 0.06 } }, { yAxis: b.high }]);
+    const fc = day ? '#0f172a' : '#e2e8f0';
     const base = {
       backgroundColor: 'transparent',
       textStyle: { color: text, fontFamily: 'inherit' },
-      tooltip: { trigger: 'axis', backgroundColor: '#0f172a', borderColor: '#334155', textStyle: { color: '#e2e8f0' } },
+      tooltip: { trigger: 'axis', backgroundColor: day ? '#ffffff' : '#0f172a', borderColor: day ? '#cbd5e1' : '#334155', textStyle: { color: day ? '#0f172a' : '#e2e8f0' } },
       grid: { left: 44, right: 18, top: 36, bottom: 40 },
       xAxis: { type: 'category', axisLine: { lineStyle: { color: grid } }, axisLabel: { color: text } },
       yAxis: { type: 'value', splitLine: { lineStyle: { color: grid } }, axisLabel: { color: text } },
@@ -100,12 +103,12 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
         xAxis: { ...base.xAxis, data: [...dates, ...fx] },
         yAxis: { ...base.yAxis, min: 0, max: 100 },
         series: [
-          { name: isG ? 'Global stress' : 'Correlation percentile', type: 'line', data: vals, showSymbol: false, lineStyle: { width: 2.4, color: isG ? stressColour(snapshot.global.score) : '#a78bfa' }, itemStyle: { color: isG ? stressColour(snapshot.global.score) : '#a78bfa' },
+          { name: isG ? 'Global' : 'Correlation pctl', type: 'line', data: vals, showSymbol: false, lineStyle: { width: 2.4, color: isG ? stressColour(snapshot.global.score) : '#a78bfa' }, itemStyle: { color: isG ? stressColour(snapshot.global.score) : '#a78bfa' },
             markArea: isG ? { silent: true, data: bandAreas } : undefined },
           ...(fx.length ? [
-            { name: 'Forecast', type: 'line', data: fMean, lineStyle: { type: 'dashed', color: '#e2e8f0' }, itemStyle: { color: '#e2e8f0' }, symbolSize: 6 },
+            { name: 'Forecast', type: 'line', data: fMean, lineStyle: { type: 'dashed', color: fc }, itemStyle: { color: fc }, symbolSize: 6 },
             { name: '80% band', type: 'line', data: fLow, stack: 'band', lineStyle: { opacity: 0 }, showSymbol: false, tooltip: { show: false } },
-            { name: '80% band', type: 'line', data: fBand, stack: 'band', lineStyle: { opacity: 0 }, showSymbol: false, areaStyle: { color: 'rgba(226,232,240,0.15)' }, tooltip: { show: false } },
+            { name: '80% band', type: 'line', data: fBand, stack: 'band', lineStyle: { opacity: 0 }, showSymbol: false, areaStyle: { color: day ? 'rgba(15,23,42,0.10)' : 'rgba(226,232,240,0.15)' }, tooltip: { show: false } },
           ] : []),
         ],
       };
@@ -128,7 +131,7 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
         dataZoom: [{ type: 'inside' }, { type: 'slider', height: 16, bottom: 6, textStyle: { color: text } }],
         grid: { ...base.grid, bottom: 52 },
         series: [{
-          name: 'Global stress (weekly)', type: 'line', data: L.global, showSymbol: false, lineStyle: { width: 1.8, color: '#38bdf8' }, itemStyle: { color: '#38bdf8' },
+          name: 'Global (weekly)', type: 'line', data: L.global, showSymbol: false, lineStyle: { width: 1.8, color: '#38bdf8' }, itemStyle: { color: '#38bdf8' },
           markArea: { silent: true, data: bandAreas },
           markPoint: {
             symbolSize: 34, label: { fontSize: 9, color: '#0f172a' }, itemStyle: { color: '#facc15' },
@@ -148,17 +151,17 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
         yAxis: [{ ...base.yAxis, scale: true, name: ind?.unit, nameTextStyle: { color: text } }, { type: 'value', min: 0, max: 100, splitLine: { show: false }, axisLabel: { color: text }, name: 'stress' }],
         series: [
           { name: `${ind?.label} (${ind?.unit})`, type: 'line', data: ind?.values ?? [], showSymbol: false, lineStyle: { width: 2, color: '#38bdf8' }, itemStyle: { color: '#38bdf8' } },
-          { name: 'Stress score', type: 'line', yAxisIndex: 1, data: [...Array(Math.max(0, dates.length - (ind?.stress_series?.length ?? 0))).fill(null), ...(ind?.stress_series ?? [])], showSymbol: false, lineStyle: { width: 1.6, type: 'dashed', color: stressColour(ind?.stress) }, itemStyle: { color: stressColour(ind?.stress) } },
+          { name: 'Stress', type: 'line', yAxisIndex: 1, data: [...Array(Math.max(0, dates.length - (ind?.stress_series?.length ?? 0))).fill(null), ...(ind?.stress_series ?? [])], showSymbol: false, lineStyle: { width: 1.6, type: 'dashed', color: stressColour(ind?.stress) }, itemStyle: { color: stressColour(ind?.stress) } },
         ],
       };
     }
     chart.current.setOption(option, true);
-  }, [snapshot, chartMode, win, ind]);
+  }, [snapshot, chartMode, win, ind, theme]);
 
   const stamp = snapshot?.as_of ?? 'latest';
   const fname = `stormdesk-${chartMode}${chartMode === 'indicator' ? `-${ind?.key}` : ''}-${stamp}`;
   const exportPng = () => {
-    const url = chart.current?.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: '#0b1220' });
+    const url = chart.current?.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: theme === 'day' ? '#ffffff' : '#0b1220' });
     if (url) downloadDataUrl(`${fname}.png`, url);
   };
   const exportXlsx = () => {
@@ -171,7 +174,7 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
       { name: 'Indicators', rows: [['key', 'label', 'class', 'source', 'value', 'unit', 'date', 'change_20d', 'level_percentile', 'momentum_z', 'P', 'M', 'V', 'C', 'N', 'stress', 'weather', 'confidence'],
         ...snapshot.indicators.filter((i) => i.available).map((i) => [i.key, i.label, i.asset_class, i.source, i.value, i.unit, i.date, i.change_20d, i.level_percentile, i.z, i.P, i.M, i.V, i.C, i.N, i.stress, i.weather, i.confidence])] },
       { name: 'Asset classes', rows: [['class', 'score', 'weather', 'confidence', 'delta_5d', 'weight_in_global', 'driver'], ...snapshot.asset_classes.map((a) => [a.title, a.score, a.weather, a.confidence, a.delta_5d, a.weight_in_global, a.driver])] },
-      { name: 'Read me', rows: [['StormDesk by Aman'], [`Snapshot ${snapshot.generated_at}`], ['Open data only: FRED, Frankfurter (ECB), CoinGecko, GDELT, World Bank, UN Comtrade.'], ['Educational and analytical use only. Not financial advice.']] },
+      { name: 'About', rows: [['StormDesk by Aman'], [`Snapshot ${snapshot.generated_at}`], ['Sources: FRED, Frankfurter (ECB), CoinGecko, GDELT, World Bank, UN Comtrade'], ['Not financial advice']] },
     ]);
   };
 
@@ -179,12 +182,12 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
     <section className="panel chart-studio">
       <div className="panel-title">
         <BarChart3 size={17} />
-        <h2>Chart studio</h2>
+        <h2>Charts</h2>
         <span>{table.title}</span>
       </div>
       <div className="chart-controls">
         <div className="seg">
-          {([['global', 'Global'], ['classes', 'Asset classes'], ['indicator', 'Indicator'], ['correlation', 'Contagion'], ['long', 'Since 2015']] as [ChartMode, string][]).map(([k, l]) => (
+          {([['global', 'Global'], ['classes', 'Classes'], ['indicator', 'Indicator'], ['correlation', 'Contagion'], ['long', 'Since 2015']] as [ChartMode, string][]).map(([k, l]) => (
             <button key={k} className={chartMode === k ? 'active' : ''} onClick={() => setChartMode(k)}>{l}</button>
           ))}
         </div>
@@ -202,11 +205,11 @@ export default function ChartStudio({ mode, snapshot, initialIndicator }: { mode
       <div ref={el} className="chart-canvas" style={{ height: mode === 'dense' ? 340 : 280 }} />
       {chartMode === 'global' && snapshot?.forecast?.backtest && (
         <p className="muted-note small">
-          Forecast: {snapshot.forecast.method}. Out-of-sample over {snapshot.forecast.backtest.days} days, 1-week error {snapshot.forecast.backtest.mae_model} points vs {snapshot.forecast.backtest.mae_no_change} for "no change". A stress projection, not a price prediction.
+          1w forecast error {snapshot.forecast.backtest.mae_model} pts vs {snapshot.forecast.backtest.mae_no_change} for no change · {snapshot.forecast.backtest.days}d out of sample
         </p>
       )}
-      {chartMode === 'long' && <p className="muted-note small">Yellow markers are known stress episodes: the index should rise into each. Drag the slider to zoom.</p>}
-      {chartMode === 'indicator' && ind && <p className="muted-note small">{ind.note || `${ind.label} from ${ind.source?.toUpperCase()} (${ind.source_id}).`} Direction: {ind.direction === 'up' ? 'higher = more stress' : ind.direction === 'down' ? 'lower = more stress' : 'large moves either way = stress'}.</p>}
+      {chartMode === 'long' && <p className="muted-note small">Markers: known stress episodes</p>}
+      {chartMode === 'indicator' && ind && <p className="muted-note small">{ind.source?.toUpperCase()} {ind.source_id} · {ind.direction === 'up' ? 'higher = stress' : ind.direction === 'down' ? 'lower = stress' : 'moves either way = stress'}{ind.note ? ` · ${ind.note}` : ''}</p>}
       <div className="chart-exports">
         <button onClick={exportPng}><FileImage size={14} /> PNG</button>
         <button onClick={() => downloadCsv(`${fname}.csv`, [table.header, ...table.rows])}><FileText size={14} /> CSV</button>

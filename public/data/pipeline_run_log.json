@@ -1,25 +1,25 @@
 {
- "started_at": "2026-11-25T11:05:17+00:00",
+ "started_at": "2026-11-25T21:56:02+00:00",
  "steps": [
   {
    "name": "fetch FRED",
    "status": "ok",
-   "seconds": 9.5
+   "seconds": 11.9
   },
   {
    "name": "fetch Frankfurter",
    "status": "ok",
-   "seconds": 0.8
+   "seconds": 0.7
   },
   {
    "name": "fetch CoinGecko",
    "status": "ok",
-   "seconds": 12.4
+   "seconds": 42.9
   },
   {
    "name": "score",
    "status": "ok",
-   "seconds": 0.9
+   "seconds": 0.5
   },
   {
    "name": "fetch World Bank",
@@ -29,7 +29,7 @@
   {
    "name": "countries",
    "status": "ok",
-   "seconds": 0.9
+   "seconds": 0.4
   },
   {
    "name": "fetch UN Comtrade",
@@ -49,13 +49,13 @@
   {
    "name": "scenarios",
    "status": "ok",
-   "seconds": 2.2
+   "seconds": 1.1
   }
  ],
- "finished_at": "2026-11-25T11:05:44+00:00",
- "seconds": 27.0,
+ "finished_at": "2026-11-25T21:56:59+00:00",
+ "seconds": 57.6,
  "status": "ok",
- "global": 64.7,
+ "global": 70.5,
  "weather": "Storm Watch",
  "health": {
   "live_count": 6,

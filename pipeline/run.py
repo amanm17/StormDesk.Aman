@@ -140,7 +140,7 @@ def main(argv=None) -> int:
             top = corridor_payload["corridors"][0]
             asset_classes.append({"key": "trade", "title": meta["title"], "score": trade_score, "weather": weather_label(trade_score),
                                   "confidence": round(sum(c["confidence"] for c in corridor_payload["corridors"]) / len(corridor_payload["corridors"])),
-                                  "driver": f"Most stressed corridor: {top['from_name']} → {top['to_name']} ({top['commodity']}, {top['stress']:.0f})",
+                                  "driver": f"{top['from_name']} → {top['to_name']} {top['stress']:.0f}",
                                   "source": "UN Comtrade + country layer", "weight_in_global": 0.0, "series": [], "delta_5d": None,
                                   "members": [], "forecast": None})
             continue
@@ -156,7 +156,7 @@ def main(argv=None) -> int:
         asset_classes.append({
             "key": key, "title": meta["title"], "score": r1(s.iloc[-1]), "weather": weather_label(s.iloc[-1]),
             "confidence": cls_conf.get(key), "weight_in_global": meta["weight"],
-            "driver": f"Led by {top['label']} ({top['stress']:.0f})" if top and top["stress"] is not None else "",
+            "driver": f"{top['label']} {top['stress']:.0f}" if top and top["stress"] is not None else "",
             "source": " + ".join(s_.upper() if s_ == "fred" else s_.capitalize() for s_ in srcs),
             "delta_5d": r1(s.iloc[-1] - s.iloc[-6]) if len(s) > 6 else None,
             "series": _series_payload(s, SPARK_DAYS), "members": members, "forecast": forecasts.get(key),

@@ -74,7 +74,7 @@ def structural(wb: dict) -> tuple[float | None, list[str], int]:
             yr = (wb.get(k) or {}).get("year")
             drivers.append(fmt.format(float(get(k))) + (f" ({yr})" if yr else ""))
     if not have:
-        return None, ["World Bank indicators unavailable."], 0
+        return None, ["No World Bank data"], 0
     tw = sum(w for _, w in have.values())
     return sum(s * w for s, w in have.values()) / tw, drivers, len(have)
 
@@ -124,17 +124,17 @@ def exposure(iso: str, cls: dict) -> tuple[float, list[str]]:
     if iso in FOOD_IMPORT:
         add("commodities", "food importer")
     if iso in USD_DEBT:
-        add("liquidity", "dollar-debt exposure"); add("fx", "dollar-debt exposure")
+        add("liquidity", "USD debt"); add("fx", "USD debt")
     if iso in CRYPTO:
-        add("crypto", "high crypto adoption")
+        add("crypto", "crypto adoption")
     if iso in OIL_EXPORT:
-        add("liquidity", "oil exporter (revenue tied to global demand)")
+        add("liquidity", "oil exporter")
     if iso in DM:
-        add("bonds", "deep bond market"); add("equities", "large equity market")
+        add("bonds", "DM rates"); add("equities", "DM equities")
     elif not picks:
-        add("fx", "emerging-market currency sensitivity")
+        add("fx", "EM FX")
     if not picks:
-        return cls.get("global", 50.0), ["global backdrop"]
+        return cls.get("global", 50.0), ["global"]
     return float(np.mean(picks)), sorted(set(why))
 
 
@@ -158,13 +158,13 @@ def build(wb_values: dict, cls_latest: dict, fx_all: dict, gdelt_countries: pd.D
         s_exp, exp_why = exposure(iso, cls_latest)
         ccy = CCY.get(iso)
         if ccy in fx_scores:
-            s_fx, fx_note = fx_scores[ccy], f"{ccy} vs USD"
+            s_fx, fx_note = fx_scores[ccy], f"{ccy}"
         elif region_fx.get(c.get("subregion") or c.get("region")):
-            s_fx, fx_note = float(np.mean(region_fx[c.get("subregion") or c.get("region")])), "regional currencies vs USD"
+            s_fx, fx_note = float(np.mean(region_fx[c.get("subregion") or c.get("region")])), "regional avg"
         elif iso == "USA":
             s_fx, fx_note = None, None
         else:
-            s_fx, fx_note = cls_latest.get("fx"), "global FX pressure"
+            s_fx, fx_note = cls_latest.get("fx"), "global FX"
         s_news = news.get(iso, {}).get("score")
         parts = {"structural": (s_struct, 0.50), "exposure": (s_exp, 0.20), "currency": (s_fx, 0.20), "news": (s_news, 0.10)}
         have = {k: v for k, v in parts.items() if v[0] is not None}
@@ -179,11 +179,11 @@ def build(wb_values: dict, cls_latest: dict, fx_all: dict, gdelt_countries: pd.D
             conf = min(conf, 45)
         drivers = []
         if s_fx is not None:
-            drivers.append(f"Currency stress {s_fx:.0f} ({fx_note})")
-        drivers.append(f"Exposure {s_exp:.0f}: {', '.join(exp_why)}")
+            drivers.append(f"Currency {s_fx:.0f} ({fx_note})")
+        drivers.append(f"Exposure {s_exp:.0f} ({', '.join(exp_why)})")
         if s_news is not None:
             nn = news[iso]
-            drivers.append(f"News stress {s_news:.0f}: 7-day tone {nn['tone_7d']}, conflict share {nn['conflict_7d']}%")
+            drivers.append(f"News {s_news:.0f} (7d tone {nn['tone_7d']}, conflict {nn['conflict_7d']}%)")
         drivers += s_drivers
         out.append({
             **{k: c.get(k) for k in ("iso2", "iso3", "name", "capital", "lat", "lng", "region", "subregion", "population", "flag")},
@@ -200,7 +200,7 @@ def build(wb_values: dict, cls_latest: dict, fx_all: dict, gdelt_countries: pd.D
         "generated_at": generated_at,
         "source": "World Bank Indicators, Frankfurter (ECB), GDELT 1.0 events, StormDesk asset-class scores",
         "count": len(out),
-        "note": "Country weather = 50% structural vulnerability, 20% exposure to stressed asset classes, 20% currency stress, 10% news stress.",
+        "note": "50% structural · 20% exposure · 20% currency · 10% news",
         "weights": {"structural": 0.5, "exposure": 0.2, "currency": 0.2, "news": 0.1},
         "countries": out,
     }

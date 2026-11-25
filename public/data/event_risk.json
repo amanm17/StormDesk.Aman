@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T11:05:41+00:00",
+ "generated_at": "2026-11-25T21:56:58+00:00",
  "source": "Official central-bank calendars",
  "reviewed_on": "2026-11-25",
  "calendar_sources": {
@@ -17,7 +17,7 @@
    "source": "Reserve Bank of India",
    "event": "RBI MPC policy decision",
    "importance": 85,
-   "days_until": 9,
+   "days_until": 8,
    "event_pressure": 22.1,
    "weather": "Background"
   },
@@ -27,7 +27,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 14,
+   "days_until": 13,
    "event_pressure": 25.0,
    "weather": "Background"
   },
@@ -37,7 +37,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 92,
-   "days_until": 22,
+   "days_until": 21,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -47,7 +47,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 90,
-   "days_until": 22,
+   "days_until": 21,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -57,7 +57,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision",
    "importance": 92,
-   "days_until": 63,
+   "days_until": 62,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -67,7 +67,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate + Monetary Policy Report",
    "importance": 92,
-   "days_until": 71,
+   "days_until": 70,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -77,7 +77,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 71,
+   "days_until": 70,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -87,7 +87,7 @@
    "source": "Reserve Bank of India",
    "event": "RBI MPC policy decision",
    "importance": 85,
-   "days_until": 72,
+   "days_until": 71,
    "event_pressure": 8.5,
    "weather": "Background"
   },
@@ -97,7 +97,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 112,
+   "days_until": 111,
    "event_pressure": 9.6,
    "weather": "Background"
   },
@@ -107,7 +107,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 113,
+   "days_until": 112,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -117,7 +117,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 88,
-   "days_until": 113,
+   "days_until": 112,
    "event_pressure": 8.8,
    "weather": "Background"
   },
@@ -127,7 +127,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision",
    "importance": 92,
-   "days_until": 154,
+   "days_until": 153,
    "event_pressure": 9.2,
    "weather": "Background"
   }
@@ -139,7 +139,7 @@
    "source": "Reserve Bank of India",
    "event": "RBI MPC policy decision",
    "importance": 85,
-   "days_until": 9,
+   "days_until": 8,
    "event_pressure": 22.1,
    "weather": "Background"
   },
@@ -149,7 +149,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 14,
+   "days_until": 13,
    "event_pressure": 25.0,
    "weather": "Background"
   },
@@ -159,7 +159,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 92,
-   "days_until": 22,
+   "days_until": 21,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -169,7 +169,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 90,
-   "days_until": 22,
+   "days_until": 21,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -179,7 +179,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision",
    "importance": 92,
-   "days_until": 63,
+   "days_until": 62,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -189,7 +189,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate + Monetary Policy Report",
    "importance": 92,
-   "days_until": 71,
+   "days_until": 70,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -199,7 +199,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 71,
+   "days_until": 70,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -209,7 +209,7 @@
    "source": "Reserve Bank of India",
    "event": "RBI MPC policy decision",
    "importance": 85,
-   "days_until": 72,
+   "days_until": 71,
    "event_pressure": 8.5,
    "weather": "Background"
   },
@@ -219,7 +219,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 112,
+   "days_until": 111,
    "event_pressure": 9.6,
    "weather": "Background"
   },
@@ -229,7 +229,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 113,
+   "days_until": 112,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -239,7 +239,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 88,
-   "days_until": 113,
+   "days_until": 112,
    "event_pressure": 8.8,
    "weather": "Background"
   },
@@ -249,7 +249,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision",
    "importance": 92,
-   "days_until": 154,
+   "days_until": 153,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -259,7 +259,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate + Monetary Policy Report",
    "importance": 92,
-   "days_until": 155,
+   "days_until": 154,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -269,7 +269,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 155,
+   "days_until": 154,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -279,7 +279,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 196,
+   "days_until": 195,
    "event_pressure": 9.6,
    "weather": "Background"
   },
@@ -289,7 +289,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 197,
+   "days_until": 196,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -299,7 +299,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 88,
-   "days_until": 204,
+   "days_until": 203,
    "event_pressure": 8.8,
    "weather": "Background"
   },
@@ -309,7 +309,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 239,
+   "days_until": 238,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -319,7 +319,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision",
    "importance": 92,
-   "days_until": 245,
+   "days_until": 244,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -329,7 +329,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate + Monetary Policy Report",
    "importance": 92,
-   "days_until": 246,
+   "days_until": 245,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -339,7 +339,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 288,
+   "days_until": 287,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -349,7 +349,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 294,
+   "days_until": 293,
    "event_pressure": 9.6,
    "weather": "Background"
   },
@@ -359,7 +359,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 88,
-   "days_until": 295,
+   "days_until": 294,
    "event_pressure": 8.8,
    "weather": "Background"
   },
@@ -369,7 +369,7 @@
    "source": "Federal Reserve",
    "event": "FOMC strategy meeting (no policy decision)",
    "importance": 60,
-   "days_until": 336,
+   "days_until": 335,
    "event_pressure": 6.0,
    "weather": "Background"
   },
@@ -379,7 +379,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 337,
+   "days_until": 336,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -389,7 +389,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate + Monetary Policy Report",
    "importance": 92,
-   "days_until": 344,
+   "days_until": 343,
    "event_pressure": 9.2,
    "weather": "Background"
   },
@@ -399,7 +399,7 @@
    "source": "Federal Reserve",
    "event": "FOMC decision + projections",
    "importance": 96,
-   "days_until": 357,
+   "days_until": 356,
    "event_pressure": 9.6,
    "weather": "Background"
   },
@@ -409,7 +409,7 @@
    "source": "European Central Bank",
    "event": "ECB policy decision",
    "importance": 90,
-   "days_until": 386,
+   "days_until": 385,
    "event_pressure": 9.0,
    "weather": "Background"
   },
@@ -419,7 +419,7 @@
    "source": "Bank of England",
    "event": "BoE Bank Rate announcement",
    "importance": 88,
-   "days_until": 386,
+   "days_until": 385,
    "event_pressure": 8.8,
    "weather": "Background"
   },
@@ -429,12 +429,12 @@
    "source": "Federal Reserve",
    "event": "FOMC decision",
    "importance": 92,
-   "days_until": 427,
+   "days_until": 426,
    "event_pressure": 9.2,
    "weather": "Background"
   }
  ],
  "needs_update": false,
  "errors": [],
- "model_note": "Event risk is scheduled-calendar pressure, not a forecast of the event outcome."
+ "model_note": "Calendar pressure, not an outcome forecast"
 }

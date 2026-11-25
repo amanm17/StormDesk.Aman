@@ -71,11 +71,11 @@ def build() -> tuple[dict, dict]:
         "all_upcoming_events": built,
         "needs_update": needs_update,
         "errors": errors,
-        "model_note": "Event risk is scheduled-calendar pressure, not a forecast of the event outcome.",
+        "model_note": "Calendar pressure, not an outcome forecast",
     }
     status = {"key": "calendar", "label": "Central-bank calendar", "url": seed["sources"]["Federal Reserve"],
               "cadence": "reviewed twice a year", "fetched_at": now_iso(),
               "status": "stale" if needs_update else "live", "live": [], "cached": [], "failed": [], "errors": errors,
-              "note": ("Fewer than 4 scheduled events in the next 120 days: add the next schedule to pipeline/calendar_seed.json."
-                       if needs_update else f"{within_120} scheduled decisions in the next 120 days. Last reviewed {seed['reviewed_on']}.")}
+              "note": ("< 4 events in next 120d: update pipeline/calendar_seed.json"
+                       if needs_update else f"{within_120} decisions in next 120d · reviewed {seed['reviewed_on']}")}
     return payload, status

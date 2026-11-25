@@ -15,10 +15,35 @@ export function weatherLabel(score: number | null | undefined): string {
   return 'Hurricane';
 }
 
+// Darker, higher-contrast versions of the same six bands for the Day theme.
+const DAY_COLOURS = ['#047857', '#4d7c0f', '#a16207', '#c2410c', '#b91c1c', '#9f1239'];
+
+export type Theme = 'day' | 'night';
+let theme: Theme = 'night';
+export function setColourTheme(t: Theme) { theme = t; }
+
 export function stressColour(score: number | null | undefined): string {
   if (score === null || score === undefined || Number.isNaN(score)) return '#64748b';
-  for (const b of BANDS) if (score <= b.high) return b.colour;
-  return '#e11d48';
+  const i = BANDS.findIndex((b) => score <= b.high);
+  const idx = i === -1 ? BANDS.length - 1 : i;
+  return theme === 'day' ? DAY_COLOURS[idx] : BANDS[idx].colour;
+}
+
+export function bandColours(t: Theme = theme) {
+  return BANDS.map((b, i) => ({ ...b, colour: t === 'day' ? DAY_COLOURS[i] : b.colour }));
+}
+
+export function ordinal(n: number | null | undefined): string {
+  if (n === null || n === undefined || Number.isNaN(n)) return 'n/a';
+  const r = Math.round(n);
+  const s = r % 100 >= 11 && r % 100 <= 13 ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' } as Record<number, string>)[r % 10] ?? 'th';
+  return `${r}${s}`;
+}
+
+export function updatedText(iso: string | undefined | null): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return `Updated ${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}, ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`;
 }
 
 export function fmt(n: number | null | undefined, digits = 0): string {
