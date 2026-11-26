@@ -225,6 +225,10 @@ export default function GlobePanel({ mode, theme, countries, corridors, focusedC
       const w = Math.max(280, mount.current.clientWidth);
       const h = Math.max(320, mount.current.clientHeight);
       camera.aspect = w / h;
+      // On wide panels the readout floats over the left side, so centre the Earth in the space to its right.
+      const shift = w >= 760 ? Math.min(190, w * 0.17) : 0;
+      if (shift) camera.setViewOffset(w, h, -shift, 0, w, h);
+      else camera.clearViewOffset();
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     };
