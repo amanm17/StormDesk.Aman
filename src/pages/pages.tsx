@@ -195,7 +195,7 @@ export function GuidePage({ snapshot }: { snapshot: Snapshot | null }) {
             <dt>History limits</dt><dd>ICE BofA spreads: 3 years free on FRED. CoinGecko: 365 days, extended by storage. GDELT: 90-day backfill.</dd>
             <dt>Lags</dt><dd>FRED oil ≈ 1 week; credit spreads 1 day; World Bank annual; Comtrade annual.</dd>
             <dt>Tape colours</dt><dd>Red: the move adds stress given the series' direction. Green: it eases stress.</dd>
-            <dt>Day / Night</dt><dd>The globe's terminator is the real one at the time you load the page, updated every minute. The theme changes the interface only, never the data.</dd>
+            <dt>Light / After Dark</dt><dd>The globe's terminator is the real one, updated every minute. Light faces the sunlit hemisphere; After Dark faces the night side. Themes never change the data.</dd>
           </dl>
         </Chapter>
       </article>

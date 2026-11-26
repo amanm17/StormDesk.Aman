@@ -192,57 +192,92 @@
 
 .focus-page-copy h2 { display: flex; align-items: center; gap: 8px; }
 
-/* ═════════════════ DAY THEME: deep daylight sky (blue), sunset crimson in Dense ═════════════════ */
-.theme-day {
-  --panel: rgba(6, 42, 82, 0.52);
-  --panel2: rgba(5, 34, 68, 0.9);
-  --line: rgba(186, 230, 253, 0.24);
-  --text: #f0f9ff;
-  --muted: #b3d9f2;
-  --cyan: #7dd3fc;
-  --sd-rule: rgba(224, 242, 254, 0.18);
+/* ═══════════ LIGHT THEME: paper content inside the After Dark navy frame (oxblood in Dense) ═══════════ */
+.app-shell.theme-day, .app-shell.theme-day.dense-mode {
+  --panel: #e8ecef;
+  --panel2: #edf0f2;
+  --line: #cdd5dc;
+  --text: #1e2d3d;
+  --muted: #5f6e7c;
+  --cyan: #2a6f8f;
+  --sd-rule: #d3dae0;
+  --frame: #071016;
+  --frame-line: rgba(148, 163, 184, 0.18);
 }
-.app-shell.theme-day {
-  background:
-    radial-gradient(760px 460px at 86% -8%, rgba(255, 226, 150, 0.55), rgba(255, 226, 150, 0) 62%),
-    radial-gradient(1100px 600px at 6% 0%, rgba(125, 211, 252, 0.35), rgba(125, 211, 252, 0) 60%),
-    radial-gradient(1400px 500px at 50% 110%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0) 70%),
-    linear-gradient(180deg, #0a4f8f 0%, #0d68ad 34%, #1179bf 62%, #0b5c9c 100%);
-  background-attachment: fixed;
-}
-.app-shell.theme-day.dense-mode {
-  --panel: rgba(70, 10, 18, 0.5);
-  --panel2: rgba(58, 8, 14, 0.92);
-  --line: rgba(254, 202, 202, 0.24);
-  --muted: #f5c4bd;
-  --cyan: #fdba74;
-  --sd-rule: rgba(254, 226, 226, 0.18);
-  background:
-    radial-gradient(760px 460px at 86% -8%, rgba(255, 196, 120, 0.55), rgba(255, 196, 120, 0) 62%),
-    radial-gradient(1100px 620px at 8% 0%, rgba(248, 113, 113, 0.32), rgba(248, 113, 113, 0) 60%),
-    linear-gradient(180deg, #5c0f17 0%, #8e1b22 38%, #b8322a 72%, #8a2317 100%);
-  background-attachment: fixed;
-}
-html[data-theme='day'], html[data-theme='day'] body { background: #0a4f8f; }
+.app-shell.theme-day.dense-mode { --cyan: #8f2430; --frame: #14070a; --frame-line: rgba(239, 68, 68, 0.2); }
+.app-shell.theme-day, .app-shell.theme-day.dense-mode { background: #dde2e6; color: var(--text); }
+html[data-theme='day'], html[data-theme='day'] body { background: #dde2e6; }
 
-/* Glass surfaces tinted to the sky instead of near-black */
-.theme-day .sd-top { background: rgba(6, 46, 92, 0.62); }
-.theme-day .sd-rail { background: rgba(6, 46, 92, 0.38); }
-.theme-day.dense-mode .sd-top { background: rgba(72, 10, 16, 0.62); }
-.theme-day.dense-mode .sd-rail { background: rgba(72, 10, 16, 0.38); }
-.theme-day .panel, .theme-day .sd-headline, .theme-day .sd-globe.globe-panel { backdrop-filter: blur(14px) saturate(1.2); box-shadow: 0 10px 40px rgba(2, 24, 52, 0.25); }
-.theme-day .sd-kpi { background: rgba(224, 242, 254, 0.06); }
-.theme-day .market-tape { background: rgba(6, 46, 92, 0.45) !important; }
-.theme-day.dense-mode .market-tape { background: rgba(72, 10, 16, 0.45) !important; }
-.theme-day .command-search input, .theme-day .topbar-right .command-search input,
-.theme-day .mode-switch, .theme-day .icon-button { background: rgba(5, 40, 80, 0.55) !important; }
-.theme-day.dense-mode .command-search input, .theme-day.dense-mode .mode-switch, .theme-day.dense-mode .icon-button { background: rgba(70, 10, 16, 0.55) !important; }
-.theme-day .search-command-panel { background: rgba(5, 38, 76, 0.96) !important; }
-.theme-day.dense-mode .search-command-panel { background: rgba(60, 8, 14, 0.96) !important; }
-.theme-day .sd-rail button.active { background: rgba(224, 242, 254, 0.16); }
-.theme-day .globe-legend span { background: rgba(5, 38, 76, 0.7); }
-.theme-day .sd-globe .region-readout { background: rgba(224, 242, 254, 0.07) !important; }
-.theme-day .formula { background: rgba(224, 242, 254, 0.08); border-color: rgba(186, 230, 253, 0.3); }
+/* Frame: header, rail and tape stay in the original After Dark shade */
+.theme-day .sd-top, .theme-day .sd-rail { background: var(--frame) !important; border-color: var(--frame-line) !important; --text: #e9f2fb; --muted: #94a3b8; --line: rgba(148, 163, 184, 0.22); color: #e9f2fb; }
+.theme-day .sd-top .sd-brand strong { color: #e9f2fb; }
+.theme-day .sd-top .sd-brand svg { color: #38bdf8; }
+.theme-day.dense-mode .sd-top .sd-brand svg { color: #f87171; }
+.theme-day .sd-rail button { color: #94a3b8; }
+.theme-day .sd-rail button:hover { color: #e9f2fb; background: rgba(148, 163, 184, 0.1); }
+.theme-day .sd-rail button.active { color: #edf0f2; background: rgba(56, 189, 248, 0.16); box-shadow: inset 3px 0 0 #38bdf8; }
+.theme-day.dense-mode .sd-rail button.active { background: rgba(239, 68, 68, 0.16); box-shadow: inset 3px 0 0 #f87171; }
+.theme-day .market-tape { background: var(--frame) !important; border-color: var(--frame-line) !important; border-radius: 14px; }
+.theme-day .tape-item { --text: #e9f2fb; --muted: #94a3b8; background: transparent !important; border-color: rgba(148, 163, 184, 0.16) !important; }
+.theme-day .tape-item strong { color: #e9f2fb !important; }
+.theme-day .tape-item span { color: #94a3b8 !important; }
+.theme-day .tape-item em.up { color: #f87171; }
+.theme-day .tape-item em.down { color: #34d399; }
+
+/* Content: flat paper panels, navy ink, hairline borders, no glow */
+.theme-day .panel, .theme-day .stress-tile, .theme-day .sd-headline, .theme-day .sd-globe.globe-panel {
+  background: var(--panel) !important; border: 1px solid var(--line) !important; box-shadow: none !important; color: var(--text);
+}
+.theme-day .stress-tile { background: #edf0f2 !important; }
+.theme-day .sd-kpi { background: #e1e6ea; border-color: var(--line); }
+.theme-day .sd-headline h1 { color: #1a2a3a; }
+.theme-day .panel-title h2, .theme-day .stress-tile h3, .theme-day .sd-globe h2, .theme-day .focus-page-copy h2, .theme-day .guide-head h1, .theme-day .guide-chapter h2 { color: var(--text) !important; }
+.theme-day .panel p, .theme-day .stress-tile p, .theme-day .muted-note, .theme-day .eyebrow, .theme-day .panel-title span { color: var(--muted) !important; }
+.theme-day .alert-item { background: #edf0f2 !important; border-color: var(--line) !important; }
+.theme-day .alert-item strong { color: var(--text) !important; }
+.theme-day .alert-item time { color: var(--muted) !important; }
+.theme-day .alert-item.high { border-left: 3px solid #a4423a !important; }
+.theme-day .alert-item.medium { border-left: 3px solid #a86a2c !important; }
+.theme-day .alert-item.low { border-left: 3px solid #2a6f8f !important; }
+.theme-day .event-row, .theme-day .corridor-row, .theme-day .data-source-row, .theme-day .corridor-feature-card,
+.theme-day .data-health-summary div, .theme-day .event-risk-score, .theme-day .region-readout, .theme-day .globe-rank button, .theme-day .trade-row {
+  background: #edf0f2 !important; border-color: var(--line) !important; color: var(--text) !important;
+}
+.theme-day .event-row span, .theme-day .corridor-row span, .theme-day .data-source-row span, .theme-day .corridor-feature-card span,
+.theme-day .corridor-feature-card small, .theme-day .corridor-row small, .theme-day .data-health-summary span, .theme-day .driver-list li,
+.theme-day .trade-row small, .theme-day .tile-foot, .theme-day .tile-members li span { color: var(--muted) !important; }
+.theme-day .sd-globe .region-readout .region-score-v4 span, .theme-day .sd-globe .region-readout .region-identity-v4 span { color: var(--muted) !important; opacity: 1 !important; }
+.theme-day .sd-globe .region-readout .region-identity-v4 strong { color: var(--text) !important; }
+.theme-day .corridor-filters button, .theme-day .seg button, .theme-day .chart-exports button, .theme-day .preset-row button.ghost { color: var(--muted) !important; border-color: var(--line) !important; background: #edf0f2 !important; }
+.theme-day .corridor-filters button.active, .theme-day .seg button.active { color: var(--text) !important; background: #d3dbe2 !important; }
+.theme-day .preset-row button { background: #edf0f2; border-color: var(--line); color: var(--text); }
+.theme-day .chart-controls select { background: #edf0f2; color: var(--text); border-color: var(--line); }
+.theme-day .indicator-table th, .theme-day .guide-table th { color: var(--muted); }
+.theme-day .indicator-table td { border-bottom-color: #d6dde3; color: var(--text); }
+.theme-day .indicator-table tbody tr:hover, .theme-day .indicator-table tbody tr.active { background: #dbe2e8; }
+.theme-day .formula { background: #e1e6ea; border-color: var(--line); color: var(--text); }
+.theme-day .metric i { background: #d3dae0 !important; }
+.theme-day .metric span, .theme-day .metric strong { color: var(--text) !important; }
+.theme-day .globe-legend span { background: #edf0f2; color: var(--muted); }
+.theme-day .scenario-slider input { accent-color: var(--cyan); }
+.theme-day .guide-toc a b, .theme-day .guide-chapter h2 span { color: var(--cyan); }
+.theme-day .guide-toc a:hover { background: #d3dbe2; }
+.theme-day .stale-banner { color: #7a4a17; background: #e9e1d4; border-color: #d4c3a6; }
+.theme-day .sd-main footer { color: var(--muted); border-top-color: var(--line); }
+.theme-day .sd-main footer b { color: var(--text); }
+
+/* Globe: the Earth sits on a deep inset "window" so it keeps its celestial look in Light */
+.theme-day .sd-globe .globe-stage { background: radial-gradient(circle at 60% 50%, #0d1d2c 0%, #071016 70%); border-left: 1px solid var(--line); }
+.theme-day.dense-mode .sd-globe .globe-stage { background: radial-gradient(circle at 60% 50%, #2a0c10 0%, #14070a 70%); }
+.theme-day .sd-col-side .sd-globe .globe-stage { border-left: 0; border-top: 1px solid var(--line); }
+.theme-day .globe-legend span { background: rgba(7, 16, 22, 0.75); color: #cbd5e1; border-color: rgba(148, 163, 184, 0.25); }
+
+/* Search panel opens from the navy header but reads as paper */
+.theme-day .command-search input { background: rgba(255, 255, 255, 0.08) !important; color: #e9f2fb !important; border-color: rgba(148, 163, 184, 0.25) !important; }
+.theme-day .search-command-panel { --text: #1e2d3d; --muted: #5f6e7c; background: #edf0f2 !important; border-color: #cdd5dc !important; box-shadow: 0 18px 48px rgba(19, 36, 58, 0.18) !important; color: #1e2d3d; }
+.theme-day .search-result-row { color: #1e2d3d !important; }
+.theme-day .search-result-row em, .theme-day .search-command-head span, .theme-day .search-api-row span { color: #5f6e7c !important; }
+.theme-day .search-result-row.cursor { background: #dbe2e8; }
 
 /* layout fixes */
 .app-shell.sd-shell { gap: 0 !important; row-gap: 0 !important; align-content: start; }

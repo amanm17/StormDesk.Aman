@@ -72,10 +72,10 @@ Optional: a free `FRED_API_KEY` GitHub secret adds US CPI / jobs / GDP / PCE rel
 ## Interface
 
 - Left nav rail: Dashboard, Globe, Trade, Scenario Lab, Charts, Guide, Sources. `/` focuses search.
-- **Day / Night**: the globe shows the real day/night terminator for the current moment (subsolar point,
-  updated every minute) with city lights on the night side. Day turns the camera to the sunlit hemisphere
-  and uses a daylight palette; Night faces the night side with a starfield. Defaults to local time; the
-  choice is remembered.
+- **Light / After Dark**: the globe shows the real day/night terminator for the current moment (subsolar
+  point, updated every minute) with city lights on the night side. After Dark is the original navy (red in
+  Dense) and faces the night side with a starfield. Light keeps the same navy frame around a muted grey
+  content area and faces the sunlit side. Defaults to local time; the choice is remembered.
 - **Clean / Dense**: Dense adds component breakdowns, members and extra metrics.
 
 ## One-time setup (about 15 minutes)

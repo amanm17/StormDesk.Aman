@@ -79,7 +79,7 @@ export default function App() {
             focusCountry={setFocusCountry} focusCorridor={setFocusCorridor} focusIndicator={setFocusIndicator} />
           <button className="icon-button" onClick={reload} title="Reload data" aria-label="Reload data"><RefreshCw size={15} /></button>
           <button className={`sd-daynight ${theme}`} onClick={() => setTheme(theme === 'day' ? 'night' : 'day')}
-            aria-label={theme === 'day' ? 'Switch to night' : 'Switch to day'} title={theme === 'day' ? 'Night' : 'Day'}>
+            aria-label={theme === 'day' ? 'Switch to After Dark' : 'Switch to Light'} title={theme === 'day' ? 'After Dark' : 'Light'}>
             <span className="sd-dn-track"><Sun size={13} className="sd-dn-sun" /><Moon size={13} className="sd-dn-moon" /><i className="sd-dn-knob" /></span>
           </button>
           <div className={`mode-switch ${mode}`} title="Clean / Dense">

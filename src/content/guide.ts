@@ -12,5 +12,5 @@ export const GUIDE_CHAPTERS = [
   { id: 'corridors', title: 'Trade corridors', tags: 'channel dependency comtrade trade index' },
   { id: 'scenarios', title: 'Scenario Lab', tags: 'shock beta linear stress test' },
   { id: 'events', title: 'Event pressure', tags: 'calendar fomc ecb boe rbi decay' },
-  { id: 'data', title: 'Data, proxies and refresh', tags: 'sources health status proxy pax gold gdelt tape colours schedule day night terminator' },
+  { id: 'data', title: 'Data, proxies and refresh', tags: 'sources health status proxy pax gold gdelt tape colours schedule light after dark terminator' },
 ] as const;

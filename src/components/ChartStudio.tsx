@@ -66,14 +66,14 @@ export default function ChartStudio({ mode, theme, snapshot, initialIndicator }:
   useEffect(() => {
     if (!chart.current || !snapshot) return;
     const day = theme === 'day';
-    const text = day ? '#e0f2fe' : '#cbd5e1';
-    const grid = day ? 'rgba(224,242,254,0.16)' : 'rgba(148,163,184,0.15)';
-    const bandAreas = bandColours(theme).map((b) => [{ yAxis: b.low, itemStyle: { color: b.colour, opacity: day ? 0.09 : 0.06 } }, { yAxis: b.high }]);
-    const fc = day ? '#fff7d6' : '#e2e8f0';
+    const text = day ? '#3b4b5c' : '#cbd5e1';
+    const grid = day ? '#d3dae0' : 'rgba(148,163,184,0.15)';
+    const bandAreas = bandColours(theme).map((b) => [{ yAxis: b.low, itemStyle: { color: b.colour, opacity: day ? 0.06 : 0.06 } }, { yAxis: b.high }]);
+    const fc = day ? '#1e2d3d' : '#e2e8f0';
     const base = {
       backgroundColor: 'transparent',
       textStyle: { color: text, fontFamily: 'inherit' },
-      tooltip: { trigger: 'axis', backgroundColor: day ? '#06325f' : '#0f172a', borderColor: day ? '#38bdf8' : '#334155', textStyle: { color: '#e2e8f0' } },
+      tooltip: { trigger: 'axis', backgroundColor: day ? '#edf0f2' : '#0f172a', borderColor: day ? '#cdd5dc' : '#334155', textStyle: { color: day ? '#1e2d3d' : '#e2e8f0' } },
       grid: { left: 44, right: 18, top: 36, bottom: 40 },
       xAxis: { type: 'category', axisLine: { lineStyle: { color: grid } }, axisLabel: { color: text } },
       yAxis: { type: 'value', splitLine: { lineStyle: { color: grid } }, axisLabel: { color: text } },
@@ -108,7 +108,7 @@ export default function ChartStudio({ mode, theme, snapshot, initialIndicator }:
           ...(fx.length ? [
             { name: 'Forecast', type: 'line', data: fMean, lineStyle: { type: 'dashed', color: fc }, itemStyle: { color: fc }, symbolSize: 6 },
             { name: '80% band', type: 'line', data: fLow, stack: 'band', lineStyle: { opacity: 0 }, showSymbol: false, tooltip: { show: false } },
-            { name: '80% band', type: 'line', data: fBand, stack: 'band', lineStyle: { opacity: 0 }, showSymbol: false, areaStyle: { color: day ? 'rgba(255,247,214,0.16)' : 'rgba(226,232,240,0.15)' }, tooltip: { show: false } },
+            { name: '80% band', type: 'line', data: fBand, stack: 'band', lineStyle: { opacity: 0 }, showSymbol: false, areaStyle: { color: day ? 'rgba(19,36,58,0.08)' : 'rgba(226,232,240,0.15)' }, tooltip: { show: false } },
           ] : []),
         ],
       };
@@ -161,7 +161,7 @@ export default function ChartStudio({ mode, theme, snapshot, initialIndicator }:
   const stamp = snapshot?.as_of ?? 'latest';
   const fname = `stormdesk-${chartMode}${chartMode === 'indicator' ? `-${ind?.key}` : ''}-${stamp}`;
   const exportPng = () => {
-    const url = chart.current?.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: theme === 'day' ? '#0b5a9a' : '#0b1220' });
+    const url = chart.current?.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: theme === 'day' ? '#e8ecef' : '#0b1220' });
     if (url) downloadDataUrl(`${fname}.png`, url);
   };
   const exportXlsx = () => {

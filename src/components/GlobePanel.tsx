@@ -60,7 +60,7 @@ const EARTH_FRAG = /* glsl */ `
     vec3 dayShade = dayCol * (0.42 + 0.95 * max(cosSun, 0.0)) * mix(1.0, 1.12, uDay);
     // Dark side: city lights, plus a faint moonlit continent layer (stronger in Day theme so the globe reads on a light page).
     vec3 lights = nightCol * vec3(1.25, 1.05, 0.75);
-    vec3 nightShade = lights * mix(2.1, 1.4, uDay) + dayCol * mix(0.06, 0.24, uDay);
+    vec3 nightShade = lights * mix(2.1, 1.7, uDay) + dayCol * mix(0.06, 0.14, uDay);
     vec3 col = mix(nightShade, dayShade, lit);
     // Twilight: a warm band along the terminator.
     float dusk = 1.0 - smoothstep(0.0, 0.2, abs(cosSun + 0.02));
@@ -269,7 +269,7 @@ export default function GlobePanel({ mode, theme, countries, corridors, focusedC
     const glowFrom = (u.atmo.glow.value as THREE.Color).clone();
     const starFrom = u.stars?.opacity ?? 0.85;
     const starTo = theme === 'day' ? 0 : 0.85;
-    const glowTo = new THREE.Color(theme === 'day' ? (mode === 'dense' ? '#ffb38a' : '#bfe6ff') : mode === 'dense' ? '#ff5a4f' : '#3b6fff');
+    const glowTo = new THREE.Color(theme === 'day' ? (mode === 'dense' ? '#ff7a6b' : '#6fb6ff') : mode === 'dense' ? '#ff5a4f' : '#3b6fff');
     const t0 = performance.now();
     let raf = 0;
     // Swing the camera to the sunlit side (Day) or the city-lit side (Night).

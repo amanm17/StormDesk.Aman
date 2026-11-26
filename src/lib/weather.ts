@@ -15,8 +15,8 @@ export function weatherLabel(score: number | null | undefined): string {
   return 'Hurricane';
 }
 
-// Both themes keep light text on a deep background, so the bright band colours work in each.
-const DAY_COLOURS = BANDS.map((b) => b.colour);
+// Deeper versions of the six bands for legibility on Light's paper background.
+const DAY_COLOURS = ['#2f7d5b', '#5e7c22', '#9a6a1c', '#b4552a', '#a4423a', '#86303a'];
 
 export type Theme = 'day' | 'night';
 let theme: Theme = 'night';
