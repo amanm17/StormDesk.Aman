@@ -1,20 +1,20 @@
 {
- "started_at": "2026-11-26T22:21:57+00:00",
+ "started_at": "2026-11-27T09:41:10+00:00",
  "steps": [
   {
    "name": "fetch FRED",
    "status": "ok",
-   "seconds": 10.6
+   "seconds": 16.4
   },
   {
    "name": "fetch Frankfurter",
    "status": "ok",
-   "seconds": 0.7
+   "seconds": 0.5
   },
   {
    "name": "fetch CoinGecko",
    "status": "ok",
-   "seconds": 12.5
+   "seconds": 12.3
   },
   {
    "name": "fetch GDELT",
@@ -54,13 +54,13 @@
   {
    "name": "scenarios",
    "status": "ok",
-   "seconds": 1.4
+   "seconds": 1.7
   }
  ],
- "finished_at": "2026-11-26T22:22:24+00:00",
- "seconds": 27.4,
+ "finished_at": "2026-11-27T09:41:43+00:00",
+ "seconds": 33.1,
  "status": "ok",
- "global": 70.7,
+ "global": 69.9,
  "weather": "Storm Watch",
  "health": {
   "live_count": 7,
