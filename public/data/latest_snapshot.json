@@ -1,6 +1,6 @@
 {
  "schema_version": "2.0.0",
- "generated_at": "2026-11-27T21:59:19+00:00",
+ "generated_at": "2026-11-28T08:55:30+00:00",
  "as_of": "2026-11-27",
  "product": {
   "name": "StormDesk",
@@ -8,20 +8,20 @@
   "full_name": "StormDesk by Aman"
  },
  "global": {
-  "score": 71.0,
+  "score": 69.6,
   "weather": "Storm Watch",
   "confidence": 95,
-  "raw_weighted": 68.0,
+  "raw_weighted": 66.6,
   "contagion_adj": 3.0,
   "breadth": 50.0,
-  "delta_5d": 3.5,
-  "delta_20d": 17.6,
+  "delta_5d": 2.1,
+  "delta_20d": 16.2,
   "dominant": {
    "key": "credit",
    "title": "Credit",
-   "score": 88.1
+   "score": 87.7
   },
-  "percentile_since_2015": 87.1
+  "percentile_since_2015": 85.7
  },
  "regime": {
   "name": "Liquidity squeeze",
@@ -29,18 +29,18 @@
  },
  "forecast": {
   "available": true,
-  "current": 71.0,
+  "current": 69.6,
   "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
   "1w": {
-   "mean": 69.9,
-   "low": 62.3,
-   "high": 77.4,
+   "mean": 68.6,
+   "low": 61.0,
+   "high": 76.1,
    "weather": "Storm Watch"
   },
   "1m": {
-   "mean": 64.9,
-   "low": 51.8,
-   "high": 78.1,
+   "mean": 63.9,
+   "low": 50.8,
+   "high": 77.0,
    "weather": "Storm Watch"
   },
   "direction": "steady",
@@ -51,8 +51,8 @@
   }
  },
  "correlation": {
-  "avg_abs_corr": 0.311,
-  "percentile": 59.7,
+  "avg_abs_corr": 0.31,
+  "percentile": 59.3,
   "series": [
    44.2,
    48.5,
@@ -113,33 +113,33 @@
    55.3,
    54.8,
    59.5,
-   59.7
+   59.3
   ]
  },
  "scores": {
-  "global": 71.0,
-  "bonds": 57.5,
-  "credit": 88.1,
-  "equities": 73.1,
-  "liquidity": 76.0,
-  "fx": 56.8,
-  "commodities": 49.6,
-  "crypto": 84.7,
-  "news": 52.5,
-  "trade": 43.2,
+  "global": 69.6,
+  "bonds": 56.2,
+  "credit": 87.7,
+  "equities": 72.2,
+  "liquidity": 75.6,
+  "fx": 56.4,
+  "commodities": 48.6,
+  "crypto": 83.6,
+  "news": 45.0,
+  "trade": 42.9,
   "event": 30.0
  },
  "asset_classes": [
   {
    "key": "bonds",
    "title": "Bonds",
-   "score": 57.5,
+   "score": 56.2,
    "weather": "Rain",
    "confidence": 99,
    "weight_in_global": 0.15,
    "driver": "10Y breakeven inflation 85",
    "source": "FRED",
-   "delta_5d": 13.5,
+   "delta_5d": 12.3,
    "series": [
     41.4,
     35.2,
@@ -200,44 +200,44 @@
     51.0,
     57.3,
     57.5,
-    57.5
+    56.2
    ],
    "members": [
     {
      "key": "breakeven10y",
      "label": "10Y breakeven inflation",
-     "stress": 85.1
+     "stress": 84.7
     },
     {
      "key": "us10y",
      "label": "US 10Y Treasury yield",
-     "stress": 55.9
+     "stress": 55.5
     },
     {
      "key": "curve10y3m",
      "label": "10Y minus 3M curve",
-     "stress": 55.0
+     "stress": 51.5
     },
     {
      "key": "us2y",
      "label": "US 2Y Treasury yield",
-     "stress": 44.9
+     "stress": 44.5
     }
    ],
    "forecast": {
     "available": true,
-    "current": 57.5,
+    "current": 56.2,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 49.5,
-     "low": 37.0,
-     "high": 62.0,
+     "mean": 48.7,
+     "low": 36.2,
+     "high": 61.1,
      "weather": "Rain"
     },
     "1m": {
-     "mean": 39.6,
-     "low": 23.8,
-     "high": 55.4,
+     "mean": 39.4,
+     "low": 23.6,
+     "high": 55.1,
      "weather": "Cloudy"
     },
     "direction": "easing",
@@ -251,13 +251,13 @@
   {
    "key": "credit",
    "title": "Credit",
-   "score": 88.1,
+   "score": 87.7,
    "weather": "Severe Storm",
    "confidence": 99,
    "weight_in_global": 0.14,
-   "driver": "US high-yield spread 90",
+   "driver": "US high-yield spread 89",
    "source": "FRED",
-   "delta_5d": 3.2,
+   "delta_5d": 2.8,
    "series": [
     39.6,
     38.3,
@@ -318,39 +318,39 @@
     87.9,
     89.0,
     88.1,
-    88.1
+    87.7
    ],
    "members": [
     {
      "key": "hy_oas",
      "label": "US high-yield spread",
-     "stress": 89.8
+     "stress": 89.3
     },
     {
      "key": "ccc_oas",
      "label": "US CCC & lower spread",
-     "stress": 88.1
+     "stress": 87.7
     },
     {
      "key": "ig_oas",
      "label": "US investment-grade spread",
-     "stress": 86.0
+     "stress": 85.5
     }
    ],
    "forecast": {
     "available": true,
-    "current": 88.1,
+    "current": 87.7,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 86.4,
-     "low": 76.0,
-     "high": 96.9,
+     "mean": 86.0,
+     "low": 75.6,
+     "high": 96.5,
      "weather": "Severe Storm"
     },
     "1m": {
-     "mean": 79.9,
-     "low": 61.0,
-     "high": 98.8,
+     "mean": 79.5,
+     "low": 60.6,
+     "high": 98.4,
      "weather": "Severe Storm"
     },
     "direction": "steady",
@@ -364,13 +364,13 @@
   {
    "key": "equities",
    "title": "Equities",
-   "score": 73.1,
+   "score": 72.2,
    "weather": "Storm Watch",
    "confidence": 99,
    "weight_in_global": 0.14,
    "driver": "VIX volatility index 90",
    "source": "FRED",
-   "delta_5d": -1.5,
+   "delta_5d": -2.5,
    "series": [
     30.7,
     33.2,
@@ -431,39 +431,39 @@
     72.3,
     73.3,
     73.1,
-    73.1
+    72.2
    ],
    "members": [
     {
      "key": "vix",
      "label": "VIX volatility index",
-     "stress": 90.2
-    },
-    {
-     "key": "nasdaq",
-     "label": "Nasdaq Composite",
-     "stress": 62.0
+     "stress": 89.8
     },
     {
      "key": "spx",
      "label": "S&P 500",
-     "stress": 60.3
+     "stress": 59.9
+    },
+    {
+     "key": "nasdaq",
+     "label": "Nasdaq Composite",
+     "stress": 59.7
     }
    ],
    "forecast": {
     "available": true,
-    "current": 73.1,
+    "current": 72.2,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 68.6,
-     "low": 56.8,
-     "high": 80.4,
+     "mean": 67.8,
+     "low": 56.0,
+     "high": 79.6,
      "weather": "Storm Watch"
     },
     "1m": {
-     "mean": 57.8,
-     "low": 40.1,
-     "high": 75.5,
+     "mean": 57.3,
+     "low": 39.7,
+     "high": 75.0,
      "weather": "Rain"
     },
     "direction": "easing",
@@ -477,13 +477,13 @@
   {
    "key": "liquidity",
    "title": "Liquidity",
-   "score": 76.0,
+   "score": 75.6,
    "weather": "Severe Storm",
-   "confidence": 97,
+   "confidence": 96,
    "weight_in_global": 0.14,
-   "driver": "St. Louis Fed financial stress 92",
+   "driver": "St. Louis Fed financial stress 91",
    "source": "FRED",
-   "delta_5d": 1.3,
+   "delta_5d": 0.9,
    "series": [
     31.3,
     31.3,
@@ -544,39 +544,39 @@
     75.7,
     75.8,
     76.0,
-    76.0
+    75.6
    ],
    "members": [
     {
      "key": "stlfsi",
      "label": "St. Louis Fed financial stress",
-     "stress": 91.6
+     "stress": 91.1
     },
     {
      "key": "usd_broad",
      "label": "Broad US dollar index",
-     "stress": 69.2
+     "stress": 68.8
     },
     {
      "key": "nfci",
      "label": "Chicago Fed financial conditions",
-     "stress": 64.0
+     "stress": 63.6
     }
    ],
    "forecast": {
     "available": true,
-    "current": 76.0,
+    "current": 75.6,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 73.3,
-     "low": 64.7,
-     "high": 81.9,
+     "mean": 72.9,
+     "low": 64.3,
+     "high": 81.5,
      "weather": "Storm Watch"
     },
     "1m": {
-     "mean": 64.8,
-     "low": 50.4,
-     "high": 79.3,
+     "mean": 64.5,
+     "low": 50.1,
+     "high": 78.9,
      "weather": "Storm Watch"
     },
     "direction": "easing",
@@ -590,13 +590,13 @@
   {
    "key": "fx",
    "title": "FX Pressure",
-   "score": 56.8,
+   "score": 56.4,
    "weather": "Rain",
    "confidence": 98,
    "weight_in_global": 0.12,
    "driver": "USD/MXN 77",
    "source": "Frankfurter",
-   "delta_5d": 2.1,
+   "delta_5d": 1.7,
    "series": [
     31.7,
     33.4,
@@ -657,74 +657,74 @@
     54.1,
     56.1,
     55.0,
-    56.8
+    56.4
    ],
    "members": [
     {
      "key": "usdmxn",
      "label": "USD/MXN",
-     "stress": 77.2
+     "stress": 76.8
     },
     {
      "key": "usdidr",
      "label": "USD/IDR",
-     "stress": 70.1
+     "stress": 69.7
     },
     {
      "key": "usdbrl",
      "label": "USD/BRL",
-     "stress": 69.0
+     "stress": 68.6
     },
     {
      "key": "usdgbp",
      "label": "USD/GBP",
-     "stress": 67.8
+     "stress": 67.4
     },
     {
      "key": "eurusd",
      "label": "USD/EUR",
-     "stress": 67.7
+     "stress": 67.2
     },
     {
      "key": "usdzar",
      "label": "USD/ZAR",
-     "stress": 64.4
+     "stress": 64.0
     },
     {
      "key": "usdinr",
      "label": "USD/INR",
-     "stress": 57.0
+     "stress": 56.6
     },
     {
      "key": "usdjpy",
      "label": "USD/JPY",
-     "stress": 38.1
+     "stress": 37.7
     },
     {
      "key": "usdkrw",
      "label": "USD/KRW",
-     "stress": 35.5
+     "stress": 35.1
     },
     {
      "key": "usdcny",
      "label": "USD/CNY",
-     "stress": 33.7
+     "stress": 33.3
     }
    ],
    "forecast": {
     "available": true,
-    "current": 56.8,
+    "current": 56.4,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 56.6,
-     "low": 48.1,
-     "high": 65.0,
+     "mean": 56.2,
+     "low": 47.8,
+     "high": 64.7,
      "weather": "Rain"
     },
     "1m": {
-     "mean": 54.5,
-     "low": 42.5,
-     "high": 66.6,
+     "mean": 54.4,
+     "low": 42.4,
+     "high": 66.4,
      "weather": "Rain"
     },
     "direction": "steady",
@@ -738,13 +738,13 @@
   {
    "key": "commodities",
    "title": "Commodities",
-   "score": 49.6,
+   "score": 48.6,
    "weather": "Rain",
    "confidence": 96,
    "weight_in_global": 0.1,
    "driver": "Brent crude oil 59",
    "source": "Coingecko + FRED",
-   "delta_5d": -1.2,
+   "delta_5d": -2.2,
    "series": [
     64.0,
     62.8,
@@ -805,49 +805,49 @@
     50.4,
     48.7,
     49.0,
-    49.6
+    48.6
    ],
    "members": [
     {
      "key": "brent",
      "label": "Brent crude oil",
-     "stress": 59.3
+     "stress": 58.8
     },
     {
      "key": "wti",
      "label": "WTI crude oil",
-     "stress": 54.9
+     "stress": 54.5
     },
     {
      "key": "oil_vol",
      "label": "Crude oil volatility (OVX)",
-     "stress": 52.7
+     "stress": 52.2
     },
     {
      "key": "natgas",
      "label": "Henry Hub natural gas",
-     "stress": 49.6
+     "stress": 49.2
     },
     {
      "key": "gold",
      "label": "Gold (PAX Gold token)",
-     "stress": 27.9
+     "stress": 24.3
     }
    ],
    "forecast": {
     "available": true,
-    "current": 49.6,
+    "current": 48.6,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 49.2,
-     "low": 40.1,
-     "high": 58.2,
+     "mean": 48.2,
+     "low": 39.2,
+     "high": 57.3,
      "weather": "Rain"
     },
     "1m": {
-     "mean": 48.9,
-     "low": 33.6,
-     "high": 64.3,
+     "mean": 48.3,
+     "low": 32.9,
+     "high": 63.6,
      "weather": "Rain"
     },
     "direction": "steady",
@@ -861,13 +861,13 @@
   {
    "key": "crypto",
    "title": "Crypto",
-   "score": 84.7,
+   "score": 83.6,
    "weather": "Severe Storm",
    "confidence": 86,
    "weight_in_global": 0.08,
-   "driver": "Bitcoin 86",
+   "driver": "Bitcoin 85",
    "source": "Coingecko",
-   "delta_5d": 1.5,
+   "delta_5d": 0.4,
    "series": [
     34.5,
     36.4,
@@ -928,34 +928,34 @@
     87.5,
     86.3,
     83.9,
-    84.7
+    83.6
    ],
    "members": [
     {
      "key": "btc",
      "label": "Bitcoin",
-     "stress": 85.7
+     "stress": 84.7
     },
     {
      "key": "eth",
      "label": "Ether",
-     "stress": 83.5
+     "stress": 82.2
     }
    ],
    "forecast": {
     "available": true,
-    "current": 84.7,
+    "current": 83.6,
     "method": "AR(1) mean reversion + damped 10-day EWMA momentum",
     "1w": {
-     "mean": 83.4,
-     "low": 70.8,
-     "high": 95.9,
+     "mean": 82.3,
+     "low": 69.8,
+     "high": 94.8,
      "weather": "Severe Storm"
     },
     "1m": {
-     "mean": 75.0,
-     "low": 54.6,
-     "high": 95.4,
+     "mean": 74.1,
+     "low": 53.8,
+     "high": 94.4,
      "weather": "Storm Watch"
     },
     "direction": "steady"
@@ -964,13 +964,13 @@
   {
    "key": "news",
    "title": "Macro News",
-   "score": 52.5,
+   "score": 45.0,
    "weather": "Rain",
    "confidence": 78,
    "weight_in_global": 0.08,
-   "driver": "Economic-stress news share 82",
+   "driver": "Economic-stress news share 65",
    "source": "Gdelt",
-   "delta_5d": 7.7,
+   "delta_5d": 0.2,
    "series": [
     null,
     null,
@@ -1031,23 +1031,23 @@
     54.9,
     58.8,
     52.5,
-    52.5
+    45.0
    ],
    "members": [
     {
      "key": "news_volume",
      "label": "Economic-stress news share",
-     "stress": 82.1
-    },
-    {
-     "key": "news_conflict",
-     "label": "Material-conflict event share",
-     "stress": 37.1
+     "stress": 64.6
     },
     {
      "key": "news_tone",
      "label": "Global news tone",
-     "stress": 33.6
+     "stress": 34.0
+    },
+    {
+     "key": "news_conflict",
+     "label": "Material-conflict event share",
+     "stress": 32.5
     }
    ],
    "forecast": {
@@ -1057,7 +1057,7 @@
   {
    "key": "trade",
    "title": "Trade Weather",
-   "score": 43.2,
+   "score": 42.9,
    "weather": "Rain",
    "confidence": 90,
    "driver": "United States → United Kingdom 54",
@@ -1091,14 +1091,14 @@
    "P": 50.529,
    "M": 48.451,
    "V": 75.132,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 93.254,
-   "stress": 55.941,
+   "stress": 55.526,
    "stress_5d_ago": 32.259,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 3,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -1408,7 +1408,7 @@
     44.4,
     55.8,
     55.9,
-    55.9
+    55.5
    ]
   },
   {
@@ -1432,14 +1432,14 @@
    "P": 32.606,
    "M": 27.06,
    "V": 82.672,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 81.085,
-   "stress": 44.932,
+   "stress": 44.517,
    "stress_5d_ago": 28.399,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 3,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -1749,7 +1749,7 @@
     35.4,
     44.8,
     44.9,
-    44.9
+    44.5
    ]
   },
   {
@@ -1765,29 +1765,28 @@
    "weight": 1.0,
    "note": "Inversion (negative) has preceded most US recessions.",
    "available": true,
-   "date": "2026-11-25",
-   "value": 0.51,
-   "change_1d": -0.04,
-   "change_20d": -0.26,
-   "z": -1.309,
-   "P": 27.315,
-   "M": 90.475,
-   "V": 64.352,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 72.685,
-   "stress": 55.005,
+   "date": "2026-11-27",
+   "value": 0.59,
+   "change_1d": 0.08,
+   "change_20d": -0.28,
+   "z": -1.397,
+   "P": 21.759,
+   "M": 91.874,
+   "V": 58.201,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 78.241,
+   "stress": 51.488,
    "stress_5d_ago": 48.125,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 1,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
-   "display": "0.51pp",
+   "display": "0.59pp",
    "weather": "Rain",
    "values": [
-    0.69,
     0.77,
     0.76,
     0.74,
@@ -1906,10 +1905,10 @@
     0.6,
     0.55,
     0.55,
-    0.51
+    0.51,
+    0.59
    ],
    "value_dates": [
-    "2026-06-04",
     "2026-06-05",
     "2026-06-08",
     "2026-06-09",
@@ -2028,7 +2027,8 @@
     "2026-11-20",
     "2026-11-23",
     "2026-11-24",
-    "2026-11-25"
+    "2026-11-25",
+    "2026-11-27"
    ],
    "stress_series": [
     17.9,
@@ -2090,7 +2090,7 @@
     52.7,
     54.8,
     55.0,
-    55.0
+    51.5
    ]
   },
   {
@@ -2106,29 +2106,28 @@
    "weight": 0.6,
    "note": "",
    "available": true,
-   "date": "2026-11-25",
-   "value": 2.12,
-   "change_1d": 0.0,
+   "date": "2026-11-27",
+   "value": 2.15,
+   "change_1d": 0.03,
    "change_20d": -0.23,
-   "z": -2.52,
-   "P": 98.677,
-   "M": 98.826,
-   "V": 61.64,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 3.439,
-   "stress": 85.096,
+   "z": -2.511,
+   "P": 98.611,
+   "M": 98.796,
+   "V": 61.706,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 4.894,
+   "stress": 84.66,
    "stress_5d_ago": 82.292,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 1,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
-   "display": "2.12%",
+   "display": "2.15%",
    "weather": "Severe Storm",
    "values": [
-    2.36,
     2.36,
     2.35,
     2.33,
@@ -2247,10 +2246,10 @@
     2.15,
     2.13,
     2.12,
-    2.12
+    2.12,
+    2.15
    ],
    "value_dates": [
-    "2026-06-04",
     "2026-06-05",
     "2026-06-08",
     "2026-06-09",
@@ -2369,7 +2368,8 @@
     "2026-11-20",
     "2026-11-23",
     "2026-11-24",
-    "2026-11-25"
+    "2026-11-25",
+    "2026-11-27"
    ],
    "stress_series": [
     64.7,
@@ -2431,7 +2431,7 @@
     85.2,
     84.9,
     85.1,
-    85.1
+    84.7
    ]
   },
   {
@@ -2455,14 +2455,14 @@
    "P": 97.817,
    "M": 95.856,
    "V": 90.344,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 97.817,
-   "stress": 89.75,
+   "stress": 89.335,
    "stress_5d_ago": 87.302,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 1,
+   "age_days": 2,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -2772,7 +2772,7 @@
     89.5,
     90.3,
     89.7,
-    89.8
+    89.3
    ]
   },
   {
@@ -2796,14 +2796,14 @@
    "P": 90.807,
    "M": 93.058,
    "V": 88.889,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 90.807,
-   "stress": 85.955,
+   "stress": 85.54,
    "stress_5d_ago": 83.198,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 1,
+   "age_days": 2,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -3113,7 +3113,7 @@
     85.9,
     87.1,
     85.9,
-    86.0
+    85.5
    ]
   },
   {
@@ -3137,14 +3137,14 @@
    "P": 99.934,
    "M": 87.484,
    "V": 88.492,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 99.934,
-   "stress": 88.133,
+   "stress": 87.718,
    "stress_5d_ago": 82.956,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 1,
+   "age_days": 2,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -3454,7 +3454,7 @@
     87.6,
     89.1,
     88.1,
-    88.1
+    87.7
    ]
   },
   {
@@ -3478,19 +3478,19 @@
    "P": 18.915,
    "M": 99.154,
    "V": 96.958,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 81.085,
-   "stress": 60.337,
+   "stress": 59.921,
    "stress_5d_ago": 61.133,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 3,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
    "display": "7,183",
-   "weather": "Storm Watch",
+   "weather": "Rain",
    "values": [
     7405.73,
     7386.65,
@@ -3795,7 +3795,7 @@
     59.9,
     60.2,
     60.3,
-    60.3
+    59.9
    ]
   },
   {
@@ -3811,29 +3811,28 @@
    "weight": 1.0,
    "note": "",
    "available": true,
-   "date": "2026-11-25",
-   "value": 23585.8,
-   "change_1d": -0.622,
-   "change_20d": -11.164,
-   "z": -2.472,
-   "P": 22.884,
-   "M": 99.328,
-   "V": 97.09,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 77.116,
-   "stress": 61.994,
+   "date": "2026-11-27",
+   "value": 24129.5,
+   "change_1d": 2.305,
+   "change_20d": -7.849,
+   "z": -1.831,
+   "P": 19.841,
+   "M": 96.646,
+   "V": 97.354,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 80.159,
+   "stress": 59.744,
    "stress_5d_ago": 65.342,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 1,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
-   "display": "23,586",
-   "weather": "Storm Watch",
+   "display": "24,130",
+   "weather": "Rain",
    "values": [
-    25929.7,
     25678.8,
     25169.5,
     25809.7,
@@ -3952,10 +3951,10 @@
     22617.73,
     24089.56,
     23733.54,
-    23585.8
+    23585.8,
+    24129.5
    ],
    "value_dates": [
-    "2026-06-08",
     "2026-06-09",
     "2026-06-10",
     "2026-06-11",
@@ -4074,7 +4073,8 @@
     "2026-11-20",
     "2026-11-23",
     "2026-11-24",
-    "2026-11-25"
+    "2026-11-25",
+    "2026-11-27"
    ],
    "stress_series": [
     26.5,
@@ -4136,7 +4136,7 @@
     60.9,
     61.8,
     62.0,
-    62.0
+    59.7
    ]
   },
   {
@@ -4160,19 +4160,19 @@
    "P": 95.899,
    "M": 97.001,
    "V": 94.841,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 95.899,
-   "stress": 90.169,
+   "stress": 89.753,
    "stress_5d_ago": 90.864,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 1,
+   "age_days": 2,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
    "display": "26.8",
-   "weather": "Hurricane",
+   "weather": "Severe Storm",
    "values": [
     17.68,
     16.2,
@@ -4477,7 +4477,7 @@
     89.4,
     91.0,
     90.2,
-    90.2
+    89.8
    ]
   },
   {
@@ -4501,14 +4501,14 @@
    "P": 98.718,
    "M": 97.529,
    "V": 95.513,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 98.718,
-   "stress": 91.562,
+   "stress": 91.147,
    "stress_5d_ago": 90.277,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 7,
+   "age_days": 8,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -4818,7 +4818,7 @@
     91.2,
     91.4,
     91.5,
-    91.6
+    91.1
    ]
   },
   {
@@ -4842,14 +4842,14 @@
    "P": 63.462,
    "M": 80.294,
    "V": 50.0,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 63.462,
-   "stress": 64.049,
+   "stress": 63.633,
    "stress_5d_ago": 62.763,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 7,
+   "age_days": 8,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -5159,7 +5159,7 @@
     63.7,
     63.9,
     64.0,
-    64.0
+    63.6
    ]
   },
   {
@@ -5183,14 +5183,14 @@
    "P": 80.556,
    "M": 92.112,
    "V": 26.984,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 80.556,
-   "stress": 69.237,
+   "stress": 68.822,
    "stress_5d_ago": 67.952,
-   "confidence": 92,
-   "freshness": 82,
-   "age_days": 7,
+   "confidence": 89,
+   "freshness": 76,
+   "age_days": 8,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -5500,7 +5500,7 @@
     68.9,
     69.1,
     69.2,
-    69.2
+    68.8
    ]
   },
   {
@@ -5524,14 +5524,14 @@
    "P": 73.677,
    "M": 3.033,
    "V": 80.556,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 73.677,
-   "stress": 54.93,
+   "stress": 54.515,
    "stress_5d_ago": 56.948,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 3,
+   "age_days": 4,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -5841,7 +5841,7 @@
     54.6,
     54.8,
     54.9,
-    54.9
+    54.5
    ]
   },
   {
@@ -5865,14 +5865,14 @@
    "P": 81.085,
    "M": 2.572,
    "V": 87.963,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 81.085,
-   "stress": 59.26,
+   "stress": 58.844,
    "stress_5d_ago": 58.542,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 3,
+   "age_days": 4,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -6182,7 +6182,7 @@
     58.9,
     59.1,
     59.2,
-    59.3
+    58.8
    ]
   },
   {
@@ -6206,14 +6206,14 @@
    "P": 72.751,
    "M": 18.611,
    "V": 51.587,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 72.751,
-   "stress": 52.661,
+   "stress": 52.246,
    "stress_5d_ago": 58.282,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 2,
+   "age_days": 3,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -6523,7 +6523,7 @@
     56.9,
     52.5,
     52.6,
-    52.7
+    52.2
    ]
   },
   {
@@ -6547,14 +6547,14 @@
    "P": 69.577,
    "M": 21.845,
    "V": 38.757,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 80.159,
-   "stress": 49.634,
+   "stress": 49.218,
    "stress_5d_ago": 49.529,
    "confidence": 99,
    "freshness": 100,
-   "age_days": 3,
+   "age_days": 4,
    "reliability": 95,
    "completeness": 100,
    "fetch": "live",
@@ -6864,7 +6864,7 @@
     49.3,
     49.5,
     49.6,
-    49.6
+    49.2
    ]
   },
   {
@@ -6880,18 +6880,18 @@
    "weight": 0.8,
    "note": "Tracks one troy ounce of London gold; used because LBMA prices are no longer free.",
    "available": true,
-   "date": "2026-11-27",
-   "value": 3642.9141707780745,
-   "change_1d": 1.996,
-   "change_20d": -10.226,
-   "z": -1.57,
-   "P": 2.18,
-   "M": 5.816,
-   "V": 85.154,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 2.18,
-   "stress": 27.947,
+   "date": "2026-11-28",
+   "value": 3645.8078820995097,
+   "change_1d": 2.466,
+   "change_20d": -10.201,
+   "z": -1.555,
+   "P": 2.446,
+   "M": 5.995,
+   "V": 86.592,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 2.446,
+   "stress": 24.339,
    "stress_5d_ago": 26.96,
    "confidence": 86,
    "freshness": 100,
@@ -6899,10 +6899,9 @@
    "reliability": 85,
    "completeness": 49,
    "fetch": "live",
-   "display": "$3,643",
+   "display": "$3,646",
    "weather": "Cloudy",
    "values": [
-    4098.5993,
     4043.9896,
     4045.4559,
     4068.0352,
@@ -7021,10 +7020,10 @@
     3621.1283,
     3543.4609,
     3571.6224,
-    3642.9142
+    3558.0509,
+    3645.8079
    ],
    "value_dates": [
-    "2026-07-31",
     "2026-08-01",
     "2026-08-02",
     "2026-08-03",
@@ -7143,7 +7142,8 @@
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-11-27"
+    "2026-11-27",
+    "2026-11-28"
    ],
    "stress_series": [
     47.0,
@@ -7205,7 +7205,7 @@
     28.8,
     23.9,
     24.7,
-    27.9
+    24.3
    ]
   },
   {
@@ -7229,14 +7229,14 @@
    "P": 75.794,
    "M": 74.561,
    "V": 50.529,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 61.971,
-   "stress": 67.654,
+   "stress": 67.238,
    "stress_5d_ago": 64.005,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -7546,7 +7546,7 @@
     63.0,
     65.1,
     58.0,
-    67.7
+    67.2
    ]
   },
   {
@@ -7570,14 +7570,14 @@
    "P": 45.503,
    "M": 36.949,
    "V": 10.45,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 90.344,
-   "stress": 38.119,
+   "stress": 37.703,
    "stress_5d_ago": 31.791,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -7887,7 +7887,7 @@
     25.2,
     26.6,
     25.0,
-    38.1
+    37.7
    ]
   },
   {
@@ -7911,14 +7911,14 @@
    "P": 79.497,
    "M": 82.543,
    "V": 33.995,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 56.614,
-   "stress": 67.824,
+   "stress": 67.409,
    "stress_5d_ago": 63.108,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -8228,7 +8228,7 @@
     62.3,
     62.3,
     60.7,
-    67.8
+    67.4
    ]
   },
   {
@@ -8252,14 +8252,14 @@
    "P": 77.646,
    "M": 0.972,
    "V": 85.45,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 77.646,
-   "stress": 56.981,
+   "stress": 56.566,
    "stress_5d_ago": 50.765,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -8569,7 +8569,7 @@
     51.9,
     53.2,
     53.9,
-    57.0
+    56.6
    ]
   },
   {
@@ -8593,14 +8593,14 @@
    "P": 0.397,
    "M": 61.768,
    "V": 47.619,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 0.397,
-   "stress": 33.715,
+   "stress": 33.3,
    "stress_5d_ago": 32.009,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -8910,7 +8910,7 @@
     31.0,
     35.1,
     33.3,
-    33.7
+    33.3
    ]
   },
   {
@@ -8934,14 +8934,14 @@
    "P": 65.344,
    "M": 59.486,
    "V": 96.958,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 65.344,
-   "stress": 68.991,
+   "stress": 68.576,
    "stress_5d_ago": 89.792,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -9251,7 +9251,7 @@
     85.0,
     84.9,
     85.1,
-    69.0
+    68.6
    ]
   },
   {
@@ -9275,14 +9275,14 @@
    "P": 38.624,
    "M": 95.536,
    "V": 82.407,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 38.624,
-   "stress": 64.406,
+   "stress": 63.99,
    "stress_5d_ago": 60.565,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -9592,7 +9592,7 @@
     62.1,
     65.0,
     64.6,
-    64.4
+    64.0
    ]
   },
   {
@@ -9616,14 +9616,14 @@
    "P": 78.373,
    "M": 84.098,
    "V": 81.349,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 78.373,
-   "stress": 77.234,
+   "stress": 76.818,
    "stress_5d_ago": 66.672,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -9933,7 +9933,7 @@
     72.8,
     81.2,
     80.5,
-    77.2
+    76.8
    ]
   },
   {
@@ -9957,14 +9957,14 @@
    "P": 99.868,
    "M": 70.947,
    "V": 19.312,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 99.868,
-   "stress": 70.137,
+   "stress": 69.721,
    "stress_5d_ago": 64.602,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -10274,7 +10274,7 @@
     62.7,
     67.8,
     70.8,
-    70.1
+    69.7
    ]
   },
   {
@@ -10298,14 +10298,14 @@
    "P": 11.905,
    "M": 47.779,
    "V": 50.926,
-   "C": 59.656,
-   "N": 52.495,
+   "C": 59.259,
+   "N": 44.981,
    "level_percentile": 11.905,
-   "stress": 35.482,
+   "stress": 35.067,
    "stress_5d_ago": 40.59,
    "confidence": 98,
    "freshness": 100,
-   "age_days": 0,
+   "age_days": 1,
    "reliability": 92,
    "completeness": 100,
    "fetch": "live",
@@ -10615,7 +10615,7 @@
     44.5,
     38.6,
     39.1,
-    35.5
+    35.1
    ]
   },
   {
@@ -10631,18 +10631,18 @@
    "weight": 1.2,
    "note": "",
    "available": true,
-   "date": "2026-11-27",
-   "value": 59781.18225165213,
-   "change_1d": -0.982,
-   "change_20d": -21.107,
-   "z": -1.779,
-   "P": 98.365,
-   "M": 96.242,
-   "V": 68.347,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 1.635,
-   "stress": 85.666,
+   "date": "2026-11-28",
+   "value": 59489.15282746969,
+   "change_1d": -1.688,
+   "change_20d": -21.494,
+   "z": -1.804,
+   "P": 99.185,
+   "M": 96.437,
+   "V": 68.715,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 0.815,
+   "stress": 84.69,
    "stress_5d_ago": 85.019,
    "confidence": 86,
    "freshness": 100,
@@ -10650,10 +10650,9 @@
    "reliability": 85,
    "completeness": 49,
    "fetch": "live",
-   "display": "$59,781",
+   "display": "$59,489",
    "weather": "Severe Storm",
    "values": [
-    64743.3371,
     62820.0861,
     62772.5773,
     63504.4156,
@@ -10772,10 +10771,10 @@
     61227.5474,
     59758.9205,
     60374.1478,
-    59781.1823
+    60510.3979,
+    59489.1528
    ],
    "value_dates": [
-    "2026-07-31",
     "2026-08-01",
     "2026-08-02",
     "2026-08-03",
@@ -10894,7 +10893,8 @@
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-11-27"
+    "2026-11-27",
+    "2026-11-28"
    ],
    "stress_series": [
     34.6,
@@ -10956,7 +10956,7 @@
     88.2,
     87.5,
     85.1,
-    85.7
+    84.7
    ]
   },
   {
@@ -10972,18 +10972,18 @@
    "weight": 1.0,
    "note": "",
    "available": true,
-   "date": "2026-11-27",
-   "value": 1663.546071062669,
-   "change_1d": -1.595,
-   "change_20d": -25.611,
-   "z": -1.619,
-   "P": 96.185,
-   "M": 94.724,
-   "V": 63.866,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 3.815,
-   "stress": 83.519,
+   "date": "2026-11-28",
+   "value": 1650.4334066796657,
+   "change_1d": -2.221,
+   "change_20d": -26.223,
+   "z": -1.652,
+   "P": 96.196,
+   "M": 95.074,
+   "V": 63.687,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 3.804,
+   "stress": 82.187,
    "stress_5d_ago": 81.006,
    "confidence": 86,
    "freshness": 100,
@@ -10991,10 +10991,9 @@
    "reliability": 85,
    "completeness": 49,
    "fetch": "live",
-   "display": "$1,664",
+   "display": "$1,650",
    "weather": "Severe Storm",
    "values": [
-    1917.5714,
     1860.5923,
     1843.4436,
     1882.9306,
@@ -11113,10 +11112,10 @@
     1709.3164,
     1677.9524,
     1690.5179,
-    1663.5461
+    1687.9229,
+    1650.4334
    ],
    "value_dates": [
-    "2026-07-31",
     "2026-08-01",
     "2026-08-02",
     "2026-08-03",
@@ -11235,7 +11234,8 @@
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-11-27"
+    "2026-11-27",
+    "2026-11-28"
    ],
    "stress_series": [
     34.5,
@@ -11297,7 +11297,7 @@
     86.6,
     84.8,
     82.5,
-    83.5
+    82.2
    ]
   },
   {
@@ -11313,18 +11313,18 @@
    "weight": 1.0,
    "note": "Share of the day's news stories whose links mention inflation, recession, crashes, defaults, layoffs, tariffs and similar terms.",
    "available": true,
-   "date": "2026-11-26",
-   "value": 3.10977,
-   "change_1d": 0.238,
-   "change_20d": 1.614,
-   "z": 2.755,
-   "P": 95.652,
-   "M": 99.706,
-   "V": 51.724,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 95.652,
-   "stress": 82.123,
+   "date": "2026-11-27",
+   "value": 2.262049765094832,
+   "change_1d": -0.848,
+   "change_20d": 0.133,
+   "z": 0.207,
+   "P": 66.667,
+   "M": 58.218,
+   "V": 76.136,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 66.667,
+   "stress": 64.623,
    "stress_5d_ago": 29.199,
    "confidence": 78,
    "freshness": 100,
@@ -11332,8 +11332,8 @@
    "reliability": 70,
    "completeness": 25,
    "fetch": "live",
-   "display": "3.11%",
-   "weather": "Severe Storm",
+   "display": "2.26%",
+   "weather": "Storm Watch",
    "values": [
     2.4896,
     2.1592,
@@ -11426,7 +11426,8 @@
     1.8427,
     2.1641,
     2.8718,
-    3.1098
+    3.1098,
+    2.262
    ],
    "value_dates": [
     "2026-08-27",
@@ -11520,7 +11521,8 @@
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
-    "2026-11-26"
+    "2026-11-26",
+    "2026-11-27"
    ],
    "stress_series": [
     null,
@@ -11582,7 +11584,7 @@
     55.9,
     79.4,
     82.1,
-    82.1
+    64.6
    ]
   },
   {
@@ -11598,18 +11600,18 @@
    "weight": 1.0,
    "note": "Article-weighted average tone of all events GDELT coded that day; more negative = more stress.",
    "available": true,
-   "date": "2026-11-26",
-   "value": -1.80289,
-   "change_1d": 0.295,
-   "change_20d": 0.367,
-   "z": 0.929,
-   "P": 13.043,
-   "M": 17.632,
-   "V": 77.011,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 86.957,
-   "stress": 33.618,
+   "date": "2026-11-27",
+   "value": -1.8031123430572364,
+   "change_1d": -0.0,
+   "change_20d": 0.288,
+   "z": 0.712,
+   "P": 13.978,
+   "M": 23.829,
+   "V": 71.591,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 86.022,
+   "stress": 34.042,
    "stress_5d_ago": 64.202,
    "confidence": 78,
    "freshness": 100,
@@ -11711,7 +11713,8 @@
     -1.5988,
     -1.877,
     -2.0979,
-    -1.8029
+    -1.8029,
+    -1.8031
    ],
    "value_dates": [
     "2026-08-27",
@@ -11805,7 +11808,8 @@
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
-    "2026-11-26"
+    "2026-11-26",
+    "2026-11-27"
    ],
    "stress_series": [
     null,
@@ -11867,7 +11871,7 @@
     50.1,
     47.1,
     33.6,
-    33.6
+    34.0
    ]
   },
   {
@@ -11883,18 +11887,18 @@
    "weight": 0.7,
    "note": "Share of events coded as material conflict (CAMEO quad class 4): a geopolitical-risk proxy.",
    "available": true,
-   "date": "2026-11-26",
-   "value": 12.3396,
-   "change_1d": -0.107,
-   "change_20d": -0.584,
-   "z": -0.592,
-   "P": 29.348,
-   "M": 27.688,
-   "V": 49.425,
-   "C": 59.656,
-   "N": 52.495,
-   "level_percentile": 29.348,
-   "stress": 37.136,
+   "date": "2026-11-27",
+   "value": 12.134517852888118,
+   "change_1d": -0.205,
+   "change_20d": -0.836,
+   "z": -0.854,
+   "P": 23.656,
+   "M": 19.642,
+   "V": 50.0,
+   "C": 59.259,
+   "N": 44.981,
+   "level_percentile": 23.656,
+   "stress": 32.548,
    "stress_5d_ago": 39.271,
    "confidence": 78,
    "freshness": 100,
@@ -11902,7 +11906,7 @@
    "reliability": 70,
    "completeness": 25,
    "fetch": "live",
-   "display": "12.3%",
+   "display": "12.1%",
    "weather": "Cloudy",
    "values": [
     12.7146,
@@ -11996,7 +12000,8 @@
     11.913,
     12.6821,
     12.447,
-    12.3396
+    12.3396,
+    12.1345
    ],
    "value_dates": [
     "2026-08-27",
@@ -12090,7 +12095,8 @@
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
-    "2026-11-26"
+    "2026-11-26",
+    "2026-11-27"
    ],
    "stress_series": [
     null,
@@ -12152,7 +12158,7 @@
     60.3,
     45.9,
     37.1,
-    37.1
+    32.5
    ]
   }
  ],
@@ -12172,12 +12178,12 @@
   {
    "key": "curve10y3m",
    "label": "10Y minus 3M curve",
-   "value": 0.51,
-   "display": "0.51pp",
-   "change": -0.04,
+   "value": 0.59,
+   "display": "0.59pp",
+   "change": 0.08,
    "change_unit": "pp",
    "direction": "down",
-   "date": "2026-11-25",
+   "date": "2026-11-27",
    "source": "FRED",
    "weather": "Rain"
   },
@@ -12203,7 +12209,7 @@
    "direction": "down",
    "date": "2026-11-25",
    "source": "FRED",
-   "weather": "Storm Watch"
+   "weather": "Rain"
   },
   {
    "key": "vix",
@@ -12215,7 +12221,7 @@
    "direction": "up",
    "date": "2026-11-26",
    "source": "FRED",
-   "weather": "Hurricane"
+   "weather": "Severe Storm"
   },
   {
    "key": "usd_broad",
@@ -12244,12 +12250,12 @@
   {
    "key": "gold",
    "label": "Gold",
-   "value": 3642.9141707780745,
-   "display": "$3,643",
-   "change": 2.0,
+   "value": 3645.8078820995097,
+   "display": "$3,646",
+   "change": 2.5,
    "change_unit": "%",
    "direction": "up",
-   "date": "2026-11-27",
+   "date": "2026-11-28",
    "source": "Coingecko",
    "weather": "Cloudy"
   },
@@ -12280,24 +12286,24 @@
   {
    "key": "btc",
    "label": "Bitcoin",
-   "value": 59781.18225165213,
-   "display": "$59,781",
-   "change": -1.0,
+   "value": 59489.15282746969,
+   "display": "$59,489",
+   "change": -1.7,
    "change_unit": "%",
    "direction": "down",
-   "date": "2026-11-27",
+   "date": "2026-11-28",
    "source": "Coingecko",
    "weather": "Severe Storm"
   },
   {
    "key": "eth",
    "label": "Ether",
-   "value": 1663.546071062669,
-   "display": "$1,664",
-   "change": -1.6,
+   "value": 1650.4334066796657,
+   "display": "$1,650",
+   "change": -2.2,
    "change_unit": "%",
    "direction": "down",
-   "date": "2026-11-27",
+   "date": "2026-11-28",
    "source": "Coingecko",
    "weather": "Severe Storm"
   }
@@ -12307,21 +12313,14 @@
    "severity": "high",
    "category": "liquidity",
    "date": "2026-11-20",
-   "text": "St. Louis Fed financial stress: 99th pctl (3y) · stress 92",
+   "text": "St. Louis Fed financial stress: 99th pctl (3y) · stress 91",
    "key": "stlfsi"
-  },
-  {
-   "severity": "high",
-   "category": "bonds",
-   "date": "2026-11-25",
-   "text": "10Y breakeven inflation: 20d move in top decile (3y) · stress 85",
-   "key": "breakeven10y"
   },
   {
    "severity": "high",
    "category": "credit",
    "date": "2026-11-26",
-   "text": "US high-yield spread: 98th pctl (3y) · stress 90",
+   "text": "US high-yield spread: 98th pctl (3y) · stress 89",
    "key": "hy_oas"
   },
   {
@@ -12347,31 +12346,24 @@
   },
   {
    "severity": "high",
-   "category": "news",
-   "date": "2026-11-26",
-   "text": "Economic-stress news share: 96th pctl (3y) · stress 82",
-   "key": "news_volume"
+   "category": "bonds",
+   "date": "2026-11-27",
+   "text": "10Y breakeven inflation: 20d move in top decile (3y) · stress 85",
+   "key": "breakeven10y"
   },
   {
    "severity": "high",
    "category": "crypto",
-   "date": "2026-11-27",
-   "text": "Bitcoin: 2nd pctl (3y) · stress 86",
+   "date": "2026-11-28",
+   "text": "Bitcoin: 1st pctl (3y) · stress 85",
    "key": "btc"
   },
   {
    "severity": "high",
    "category": "crypto",
-   "date": "2026-11-27",
-   "text": "Ether: 4th pctl (3y) · stress 84",
+   "date": "2026-11-28",
+   "text": "Ether: 4th pctl (3y) · stress 82",
    "key": "eth"
-  },
-  {
-   "severity": "medium",
-   "category": "bonds",
-   "date": "2026-11-25",
-   "text": "10Y breakeven inflation -0.23pp in 20d (2.5σ)",
-   "key": "breakeven10y"
   },
   {
    "severity": "medium",
@@ -12382,17 +12374,10 @@
   },
   {
    "severity": "medium",
-   "category": "equities",
-   "date": "2026-11-25",
-   "text": "Nasdaq Composite -11.16% in 20d (2.5σ)",
-   "key": "nasdaq"
-  },
-  {
-   "severity": "medium",
-   "category": "news",
-   "date": "2026-11-26",
-   "text": "Economic-stress news share +1.61 % of stories in 20d (2.8σ)",
-   "key": "news_volume"
+   "category": "bonds",
+   "date": "2026-11-27",
+   "text": "10Y breakeven inflation -0.23pp in 20d (2.5σ)",
+   "key": "breakeven10y"
   },
   {
    "severity": "medium",
@@ -12925,7 +12910,7 @@
    69.9,
    71.6,
    70.6,
-   71.0
+   69.6
   ],
   "classes": {
    "bonds": [
@@ -13188,7 +13173,7 @@
     51.0,
     57.3,
     57.5,
-    57.5
+    56.2
    ],
    "credit": [
     43.1,
@@ -13450,7 +13435,7 @@
     87.9,
     89.0,
     88.1,
-    88.1
+    87.7
    ],
    "equities": [
     50.9,
@@ -13712,7 +13697,7 @@
     72.3,
     73.3,
     73.1,
-    73.1
+    72.2
    ],
    "liquidity": [
     48.0,
@@ -13974,7 +13959,7 @@
     75.7,
     75.8,
     76.0,
-    76.0
+    75.6
    ],
    "fx": [
     41.8,
@@ -14236,7 +14221,7 @@
     54.1,
     56.1,
     55.0,
-    56.8
+    56.4
    ],
    "commodities": [
     36.4,
@@ -14498,7 +14483,7 @@
     50.4,
     48.7,
     49.0,
-    49.6
+    48.6
    ],
    "crypto": [
     null,
@@ -14760,7 +14745,7 @@
     87.5,
     86.3,
     83.9,
-    84.7
+    83.6
    ],
    "news": [
     null,
@@ -15022,7 +15007,7 @@
     54.9,
     58.8,
     52.5,
-    52.5
+    45.0
    ]
   },
   "correlation": [
@@ -15285,7 +15270,7 @@
    55.3,
    54.8,
    59.5,
-   59.7
+   59.3
   ],
   "regimes": [
    {
@@ -17577,7 +17562,7 @@
    63.6,
    52.6,
    67.5,
-   71.0
+   69.6
   ]
  },
  "scenarios": [
@@ -17586,118 +17571,118 @@
    "label": "Oil price",
    "unit": "%",
    "note": "WTI = Brent; OVX +0.25 pt per 1%",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -40,
-     "global": 69.4,
+     "global": 68.0,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 34.5,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 33.4,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -20,
-     "global": 70.0,
+     "global": 68.7,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 40.4,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 39.4,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -10,
-     "global": 70.6,
+     "global": 69.2,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 45.8,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 44.7,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 10,
-     "global": 71.4,
+     "global": 70.1,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 53.9,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 52.9,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 20,
-     "global": 71.9,
+     "global": 70.5,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 58.2,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 57.2,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 30,
-     "global": 73.1,
+     "global": 71.8,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 63.0,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 62.0,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 50,
-     "global": 73.9,
+     "global": 72.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 70.4,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 69.4,
+      "crypto": 83.6,
+      "news": 45.0
      }
     }
    ]
@@ -17707,118 +17692,118 @@
    "label": "US 10Y yield",
    "unit": "bp",
    "note": "2Y β 0.6; 3M fixed",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -100,
-     "global": 76.9,
+     "global": 75.7,
      "classes": {
-      "bonds": 90.0,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 89.6,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -50,
-     "global": 76.2,
+     "global": 74.8,
      "classes": {
-      "bonds": 85.6,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 84.5,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -25,
-     "global": 74.8,
+     "global": 73.6,
      "classes": {
-      "bonds": 76.6,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 76.3,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 25,
-     "global": 70.3,
+     "global": 68.6,
      "classes": {
-      "bonds": 53.4,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 49.5,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 50,
-     "global": 73.2,
+     "global": 71.2,
      "classes": {
-      "bonds": 66.8,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 61.3,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 100,
-     "global": 73.4,
+     "global": 72.8,
      "classes": {
-      "bonds": 68.3,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 71.7,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 150,
-     "global": 74.5,
+     "global": 73.4,
      "classes": {
-      "bonds": 75.2,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 75.1,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     }
    ]
@@ -17828,104 +17813,104 @@
    "label": "US dollar (broad)",
    "unit": "%",
    "note": "EM FX β 0.4–1.4",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -6,
-     "global": 69.2,
+     "global": 67.8,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 63.3,
-      "fx": 57.4,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 62.9,
+      "fx": 57.0,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -3,
-     "global": 68.7,
+     "global": 67.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 67.6,
-      "fx": 48.5,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 67.2,
+      "fx": 48.1,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 2,
-     "global": 74.6,
+     "global": 73.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 82.0,
-      "fx": 72.6,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 81.6,
+      "fx": 72.2,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 4,
-     "global": 76.1,
+     "global": 74.7,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 83.3,
-      "fx": 82.6,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 82.9,
+      "fx": 82.2,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 6,
-     "global": 76.7,
+     "global": 75.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 83.6,
-      "fx": 87.0,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 83.2,
+      "fx": 86.6,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 10,
-     "global": 77.0,
+     "global": 75.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 83.6,
-      "fx": 89.4,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 83.2,
+      "fx": 89.0,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     }
    ]
@@ -17935,104 +17920,104 @@
    "label": "VIX",
    "unit": "pts",
    "note": "OVX β 0.4",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -10,
-     "global": 68.1,
+     "global": 66.8,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 59.3,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.0,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 58.3,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.0,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -5,
-     "global": 70.3,
+     "global": 68.9,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 68.7,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.3,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 67.7,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.3,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 5,
-     "global": 71.2,
+     "global": 69.8,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.8,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 50.4,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.9,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 49.4,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 10,
-     "global": 71.3,
+     "global": 69.9,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 74.2,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 51.0,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 73.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 50.0,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 20,
-     "global": 71.4,
+     "global": 70.1,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 74.3,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 52.3,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 73.3,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 51.3,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 30,
-     "global": 71.6,
+     "global": 70.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 74.5,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 53.9,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 73.6,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 52.9,
+      "crypto": 83.6,
+      "news": 45.0
      }
     }
    ]
@@ -18042,104 +18027,104 @@
    "label": "High-yield spread",
    "unit": "bp",
    "note": "IG β 0.35; CCC β 2.5",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -100,
-     "global": 63.4,
+     "global": 62.0,
      "classes": {
-      "bonds": 57.5,
-      "credit": 41.4,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 41.0,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -50,
-     "global": 67.1,
+     "global": 65.8,
      "classes": {
-      "bonds": 57.5,
-      "credit": 61.9,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 61.5,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 50,
-     "global": 71.7,
+     "global": 70.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 93.0,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 92.6,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 100,
-     "global": 71.8,
+     "global": 70.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 93.6,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 93.2,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 200,
-     "global": 71.8,
+     "global": 70.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 93.6,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 93.2,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 400,
-     "global": 71.8,
+     "global": 70.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 93.6,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 93.2,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     }
    ]
@@ -18149,104 +18134,104 @@
    "label": "S&P 500",
    "unit": "%",
    "note": "Nasdaq β 1.3",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -30,
-     "global": 73.6,
+     "global": 72.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 91.0,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 90.5,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -20,
-     "global": 72.8,
+     "global": 71.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 85.2,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 84.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -10,
-     "global": 71.8,
+     "global": 70.5,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 78.8,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 78.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": -5,
-     "global": 71.5,
+     "global": 70.1,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 76.4,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 75.6,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 5,
-     "global": 70.5,
+     "global": 68.8,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 69.5,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 66.5,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 10,
-     "global": 68.5,
+     "global": 66.7,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 61.0,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 57.6,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     }
    ]
@@ -18256,97 +18241,97 @@
    "label": "Bitcoin",
    "unit": "%",
    "note": "ETH β 1.3",
-   "base_global": 71.0,
+   "base_global": 69.6,
    "steps": [
     {
      "shock": -50,
-     "global": 71.7,
+     "global": 70.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 93.5,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 93.1,
+      "news": 45.0
      }
     },
     {
      "shock": -30,
-     "global": 71.7,
+     "global": 70.4,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 93.5,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 93.1,
+      "news": 45.0
      }
     },
     {
      "shock": -15,
-     "global": 71.6,
+     "global": 70.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 92.4,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 91.9,
+      "news": 45.0
      }
     },
     {
      "shock": 0,
-     "global": 71.0,
+     "global": 69.6,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 84.7,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 83.6,
+      "news": 45.0
      }
     },
     {
      "shock": 15,
-     "global": 70.0,
+     "global": 68.7,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 73.4,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 71.9,
+      "news": 45.0
      }
     },
     {
      "shock": 30,
-     "global": 67.7,
+     "global": 66.3,
      "classes": {
-      "bonds": 57.5,
-      "credit": 88.1,
-      "equities": 73.1,
-      "liquidity": 76.0,
-      "fx": 56.8,
-      "commodities": 49.6,
-      "crypto": 54.6,
-      "news": 52.5
+      "bonds": 56.2,
+      "credit": 87.7,
+      "equities": 72.2,
+      "liquidity": 75.6,
+      "fx": 56.4,
+      "commodities": 48.6,
+      "crypto": 53.2,
+      "news": 45.0
      }
     }
    ]
   }
  ],
  "event_risk": {
-  "generated_at": "2026-11-27T21:59:20+00:00",
+  "generated_at": "2026-11-28T08:55:30+00:00",
   "source": "Official central-bank calendars",
   "reviewed_on": "2026-11-25",
   "calendar_sources": {
@@ -18364,7 +18349,7 @@
     "source": "Reserve Bank of India",
     "event": "RBI MPC policy decision",
     "importance": 85,
-    "days_until": 7,
+    "days_until": 6,
     "event_pressure": 40.8,
     "weather": "Cloud watch"
    },
@@ -18374,7 +18359,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 12,
+    "days_until": 11,
     "event_pressure": 25.0,
     "weather": "Background"
    },
@@ -18384,7 +18369,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 92,
-    "days_until": 20,
+    "days_until": 19,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18394,7 +18379,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 90,
-    "days_until": 20,
+    "days_until": 19,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18404,7 +18389,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision",
     "importance": 92,
-    "days_until": 61,
+    "days_until": 60,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18414,7 +18399,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate + Monetary Policy Report",
     "importance": 92,
-    "days_until": 69,
+    "days_until": 68,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18424,7 +18409,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 69,
+    "days_until": 68,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18434,7 +18419,7 @@
     "source": "Reserve Bank of India",
     "event": "RBI MPC policy decision",
     "importance": 85,
-    "days_until": 70,
+    "days_until": 69,
     "event_pressure": 8.5,
     "weather": "Background"
    },
@@ -18444,7 +18429,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 110,
+    "days_until": 109,
     "event_pressure": 9.6,
     "weather": "Background"
    },
@@ -18454,7 +18439,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 111,
+    "days_until": 110,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18464,7 +18449,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 88,
-    "days_until": 111,
+    "days_until": 110,
     "event_pressure": 8.8,
     "weather": "Background"
    },
@@ -18474,7 +18459,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision",
     "importance": 92,
-    "days_until": 152,
+    "days_until": 151,
     "event_pressure": 9.2,
     "weather": "Background"
    }
@@ -18486,7 +18471,7 @@
     "source": "Reserve Bank of India",
     "event": "RBI MPC policy decision",
     "importance": 85,
-    "days_until": 7,
+    "days_until": 6,
     "event_pressure": 40.8,
     "weather": "Cloud watch"
    },
@@ -18496,7 +18481,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 12,
+    "days_until": 11,
     "event_pressure": 25.0,
     "weather": "Background"
    },
@@ -18506,7 +18491,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 92,
-    "days_until": 20,
+    "days_until": 19,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18516,7 +18501,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 90,
-    "days_until": 20,
+    "days_until": 19,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18526,7 +18511,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision",
     "importance": 92,
-    "days_until": 61,
+    "days_until": 60,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18536,7 +18521,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate + Monetary Policy Report",
     "importance": 92,
-    "days_until": 69,
+    "days_until": 68,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18546,7 +18531,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 69,
+    "days_until": 68,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18556,7 +18541,7 @@
     "source": "Reserve Bank of India",
     "event": "RBI MPC policy decision",
     "importance": 85,
-    "days_until": 70,
+    "days_until": 69,
     "event_pressure": 8.5,
     "weather": "Background"
    },
@@ -18566,7 +18551,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 110,
+    "days_until": 109,
     "event_pressure": 9.6,
     "weather": "Background"
    },
@@ -18576,7 +18561,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 111,
+    "days_until": 110,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18586,7 +18571,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 88,
-    "days_until": 111,
+    "days_until": 110,
     "event_pressure": 8.8,
     "weather": "Background"
    },
@@ -18596,7 +18581,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision",
     "importance": 92,
-    "days_until": 152,
+    "days_until": 151,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18606,7 +18591,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate + Monetary Policy Report",
     "importance": 92,
-    "days_until": 153,
+    "days_until": 152,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18616,7 +18601,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 153,
+    "days_until": 152,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18626,7 +18611,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 194,
+    "days_until": 193,
     "event_pressure": 9.6,
     "weather": "Background"
    },
@@ -18636,7 +18621,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 195,
+    "days_until": 194,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18646,7 +18631,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 88,
-    "days_until": 202,
+    "days_until": 201,
     "event_pressure": 8.8,
     "weather": "Background"
    },
@@ -18656,7 +18641,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 237,
+    "days_until": 236,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18666,7 +18651,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision",
     "importance": 92,
-    "days_until": 243,
+    "days_until": 242,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18676,7 +18661,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate + Monetary Policy Report",
     "importance": 92,
-    "days_until": 244,
+    "days_until": 243,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18686,7 +18671,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 286,
+    "days_until": 285,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18696,7 +18681,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 292,
+    "days_until": 291,
     "event_pressure": 9.6,
     "weather": "Background"
    },
@@ -18706,7 +18691,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 88,
-    "days_until": 293,
+    "days_until": 292,
     "event_pressure": 8.8,
     "weather": "Background"
    },
@@ -18716,7 +18701,7 @@
     "source": "Federal Reserve",
     "event": "FOMC strategy meeting (no policy decision)",
     "importance": 60,
-    "days_until": 334,
+    "days_until": 333,
     "event_pressure": 6.0,
     "weather": "Background"
    },
@@ -18726,7 +18711,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 335,
+    "days_until": 334,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18736,7 +18721,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate + Monetary Policy Report",
     "importance": 92,
-    "days_until": 342,
+    "days_until": 341,
     "event_pressure": 9.2,
     "weather": "Background"
    },
@@ -18746,7 +18731,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision + projections",
     "importance": 96,
-    "days_until": 355,
+    "days_until": 354,
     "event_pressure": 9.6,
     "weather": "Background"
    },
@@ -18756,7 +18741,7 @@
     "source": "European Central Bank",
     "event": "ECB policy decision",
     "importance": 90,
-    "days_until": 384,
+    "days_until": 383,
     "event_pressure": 9.0,
     "weather": "Background"
    },
@@ -18766,7 +18751,7 @@
     "source": "Bank of England",
     "event": "BoE Bank Rate announcement",
     "importance": 88,
-    "days_until": 384,
+    "days_until": 383,
     "event_pressure": 8.8,
     "weather": "Background"
    },
@@ -18776,7 +18761,7 @@
     "source": "Federal Reserve",
     "event": "FOMC decision",
     "importance": 92,
-    "days_until": 425,
+    "days_until": 424,
     "event_pressure": 9.2,
     "weather": "Background"
    }
